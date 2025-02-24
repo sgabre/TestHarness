@@ -4,7 +4,7 @@ A Test Harness automates the execution, monitoring, and validation of tests in e
 
 # Workflow
 
-1.Checkout Code
+1. Checkout Code
 
 2. Compilation
 
