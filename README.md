@@ -4,29 +4,53 @@ A Test Harness automates the execution, monitoring, and validation of tests in e
 
 # Workflow
 
-1. Compilation
+1.Checkout Code
 
-2. Static Code Analysis
+2. Compilation
+
+3. Static Code Analysis
 
 4. Unit Testing
-    - Checkout Code
     - Compile Unit Tests
     - Flash Firmware
     - Run Tests on Target
     - Check Test Results
 
 6. Component Testing
+    - Compile Component Tests
+    - Flash Firmware
+    - Run Tests on Target
+    - Check Test Results
 
 7. Integration testing
+    - Compile Integration Tests
+    - Flash Firmware
+    - Run Tests on Target
+    - Check Test Results
 
-8. Component integration testing
+9. Component integration testing
+    - Compile Component Integration Tests
+    - Flash Firmware
+    - Run Tests on Target
+    - Check Test Results
 
-9. System integration testing
+11. System integration testing
+    - Compile System Integration Tests
+    - Flash Firmware
+    - Run Tests on Target
+    - Check Test Results
 
-10. System testing
-
-11. Acceptance testing
+13. System testing
+    - Compile System Tests
+    - Flash Firmware
+    - Run Tests on Target
+    - Check Test Results
    
+14. Acceptance testing
+    - Compile System Tests
+    - Flash Firmware
+    - Run Tests on Target
+    - Check Test Results
 
 
 
