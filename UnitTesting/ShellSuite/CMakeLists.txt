@@ -1,0 +1,34 @@
+
+
+#add_executable(ShellInitSuiteApp Shell_Init_Suite.c)
+#target_link_libraries(ShellInitSuiteApp Shell Unity)
+#add_test(Shell_Init_Suite ShellInitSuiteApp)
+
+
+#add_executable(ShellHandlerSuiteApp Shell_Handler_Suite.c)
+#target_link_libraries(ShellHandlerSuiteApp Shell Unity)
+#add_test(Shell_Handler_Suite ShellHandlerSuiteApp)
+
+#add_executable(ShellSizeSuiteApp Shell_Size_Suite.c)
+#target_link_libraries(ShellSizeSuiteApp Shell Unity)
+#add_test(Shell_Size_Suite ShellSizeSuiteApp)
+
+#add_executable(ShellCommandsSuiteApp Shell_Commands_Suite.c)
+#target_link_libraries(ShellCommandsSuiteApp Shell Unity)
+#add_test(Shell_Commands_Suite ShellCommandsSuiteApp)
+
+#add_executable(ShellRegisterSuiteApp Shell_Register_Suite.c)
+#target_link_libraries(ShellRegisterSuiteApp Shell Unity)
+#add_test(Shell_Register_Suite ShellRegisterSuiteApp)
+
+add_executable(ShellParseCommandSuiteApp Shell_ParseCommand_Suite.c)
+target_link_libraries(ShellParseCommandSuiteApp Shell Unity)
+add_test(Shell_ParseCommand_Suite ShellParseCommandSuiteApp)
+
+add_executable(ShellGetsSuiteApp Shell_Gets_Suite.c)
+target_link_libraries(ShellGetsSuiteApp Shell Unity)
+add_test(Shell_Gets_Suite ShellGetsSuiteApp)
+
+add_executable(ShellSearchCommandSuiteApp Shell_SearchCommand_Suite.c)
+target_link_libraries(ShellSearchCommandSuiteApp Shell Unity)
+add_test(Shell_SearchCommand_Suite ShellSearchCommandSuiteApp)

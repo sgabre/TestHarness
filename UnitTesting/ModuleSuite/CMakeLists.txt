@@ -1,0 +1,10 @@
+
+
+add_executable(ModuleFunctionSuiteApp Module_Function_Suite.c)
+target_link_libraries(ModuleFunctionSuiteApp Module Unity)
+add_test(Module_Function_Suite ModuleFunctionSuiteApp)
+
+
+add_executable(ModuleIsPalindromeSuiteApp Module_IsPalindrome_Suite.c)
+target_link_libraries(ModuleIsPalindromeSuiteApp Module Unity)
+add_test(Module_IsPalindrome_Suite ModuleIsPalindromeSuiteApp)
