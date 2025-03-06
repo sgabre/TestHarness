@@ -17,10 +17,10 @@ The purpose of Firmware Integration Testing is to verify that individual firmwar
 #### Software
 
 1. Test Analysis & Planning
-
+* Define test objectives, strategies, and test coverage requirements
 3. Test Case Development
-- doxygen
-- IDE (VS Code, STM32CubeIDE),
+  * doxygen
+  * IDE (VS Code, STM32CubeIDE),
   
 3. Test Execution
 - Compilator, 
@@ -39,19 +39,19 @@ The purpose of Firmware Integration Testing is to verify that individual firmwar
 
 ### Inputs
 
-- Firmware Integration Strategies
-- Firmware Component Code Sources
-- Firmware Architecture Design [Software Architecture, Functional Decoposition]
-- Firmware Detailled Design 
+* Firmware Integration Strategies – Define how components will be integrated and tested
+* Firmware Component Code Sources – Individual Component, modules and drivers
+* Firmware Architecture Design – Software architecture and functional decomposition
+* Firmware Detailed Design – Interface definitions, state machines, and functional descriptions
 
 ### Delivery
 
-- Component Test Code Sources
-- Module.lib
-- ModuleTestRunner.bin
-- ComponentTestRunner.bin
-- Integration Test Report
-- Quality Report 
+* Component Test Code Sources – Test implementations for each component
+* Module.lib – Compiled library for tested modules
+* ModuleTestRunner.bin – Executable test runner for module testing
+* ComponentTestRunner.bin – Executable test runner for component testing
+* Integration Test Report – Summary of pass/fail results for each integration test case
+* Quality Report – Detailed analysis of test coverage, performance, and integration effectiveness
 
 ### Criterial
 
