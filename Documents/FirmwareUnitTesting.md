@@ -29,12 +29,12 @@ The purpose of unit testing is to verified individual functions (Public & Privat
 
 ### Test Type
 
-- Boundary Tests
-- Functional Tests
-- Structural Tests
-- Error Handling Tests*
-- Performance Tests*
-- Regression Tests (Testbenc + CI)
+* Boundary Tests - Test function behavior at limit values.
+* Structural Tests – Ensure code coverage requirements (statement/branch coverage).
+* Functional Tests - Verify correct output based on expected behavior.
+* Error Handling Tests – Validate function responses to invalid inputs.
+* Performance Tests – Measure execution time, memory usage, and CPU cycles.
+* Regression Tests – Ensure previous functionality remains intact (Testbench + CI)
 
 ### Inputs
 
