@@ -39,10 +39,10 @@ The purpose of Component testing is to TBD
 
 ### Inputs
 
-- Integration Strategies
-- Software Component Code Sources
-- Software Architecture Design [Software Architecture, Functional Decoposition]
-- Software Detailled Design 
+- Firmware Integration Strategies
+- Firmware Component Code Sources
+- Firmware Architecture Design [Software Architecture, Functional Decoposition]
+- Firmware Detailled Design 
 
 ### Delivery
 
