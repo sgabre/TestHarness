@@ -38,8 +38,8 @@ The purpose of Component testing is to TBD
 
 ### Inputs
 
-- Software Component Code Sources
-- Software Low Level Design/Software Detailed Design (doxygen for the Component & Module(s) )
+- Firmware Component Code Sources
+- Firmware Low Level Design/Firmware Detailed Design (doxygen for the Component & Module(s) )
 
 ### Delivery
 
