@@ -43,10 +43,10 @@ The purpose of unit testing is to verified individual functions (Public & Privat
 
 ### Delivery
 
-- Unit Test Sources
-- FunctionUnitTestRunner.bin
-- Unit Test Report
-- Quality Report 
+- Unit Test Sources: Test cases for each function.
+- FunctionUnitTestRunner.bin: Compiled test runner executable.
+- Unit Test Report: Pass/fail status for each test case.
+- Quality Report: Overall test coverage, cyclomatic complexity, and code quality metrics.
 
 ### Criterial
 
