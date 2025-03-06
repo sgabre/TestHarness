@@ -9,10 +9,10 @@ A Test Harness automates the execution, monitoring, and validation of tests in e
 4. Static & Dynamic Code Analysis
 5. Documentation
 6. [Unit Testing](./Documents/FirmwareUnitTesting.md)
-8. Component Testing
-9. Integration testing
-7. System testing
-8. Acceptance testing
+8. [Component Testing](./Documents/FirmwareComponentTesting.md)
+9. [Integration testing](./Documents/FirmwareIntegrationesting.md)
+7. [System testing](./Documents/FirmwareSystemTesting.md)
+8. [Acceptance testing](./Documents/FirmwareAcceptanceTesting.md)
 9.  Package
 10. Release
 
