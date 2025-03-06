@@ -41,12 +41,12 @@ The purpose of Component Testing is to verify the correctness, reliability, and 
 
 ### Delivery
 
-- Component Test Code Sources
-- Module.lib
-- ModuleTestRunner.bin
-- ComponentTestRunner.bin
-- Unit Test Report
-- Quality Report 
+* Component Test Code Sources – Unit test implementations
+* Module.lib – Library file for the tested module
+* ModuleTestRunner.bin – Executable test runner for module testing
+* ComponentTestRunner.bin – Executable test runner for component testing
+* Unit Test Report – Detailed pass/fail results
+* Quality Report – Coverage metrics, performance, and complexity analysis
 
 ### Criterial
 
