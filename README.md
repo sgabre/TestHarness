@@ -15,7 +15,7 @@ A Test Harness automates the execution, monitoring, and validation of tests in e
 - Power Supply
 - J-Link
 - Virtual COM/Debug Port (UART/ITM)
-- Microcontroller/Product Board
+- Microcontroller Board/Dev Board/Product Board/Device Board
 
 #### Software
 
