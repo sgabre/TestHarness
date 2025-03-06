@@ -23,10 +23,10 @@ The purpose of Firmware Integration Testing is to verify that individual firmwar
   * IDE (VS Code, STM32CubeIDE),
   
 3. Test Execution
-- Compilator, 
-- CMake
-- Shelly
-- Python
+* Compiler – (GCC, IAR, Keil, etc.)
+* CMake – Build System
+* Shell Scripting (Shelly) – Automate test execution
+* Python – Custom test scripts and automation frameworks
  
 ### Test Type
 
