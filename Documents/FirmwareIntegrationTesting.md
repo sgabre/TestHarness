@@ -36,10 +36,10 @@ The purpose of Firmware Integration Testing is to verify that individual firmwar
 * Error Handling Tests – Ensure proper error detection and recovery at integration level
 * Performance Tests – Measure execution time, memory usage, and CPU load in integrated execution
 * Consumption Testing – Evaluate the power and memory consumption of the firmware in different conditions:
-       - Idle Power Consumption – Measure power draw in low-power states
-       - Active Power Consumption – Measure power draw under various workloads
-       - Peak Current Analysis – Identify peak current draw and power spikes
-       - Memory Usage Analysis – Measure RAM and Flash usage
+- Idle Power Consumption – Measure power draw in low-power states
+- Active Power Consumption – Measure power draw under various workloads
+- Peak Current Analysis – Identify peak current draw and power spikes
+- Memory Usage Analysis – Measure RAM and Flash usage
 * Regression Tests – Ensure new changes do not break existing functionality (Testbench + CI)
 
 ### Inputs
