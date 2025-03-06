@@ -75,6 +75,7 @@ Module-Level Integration Summary
 Consumption Testing Results
 
 | Condition          |	Power Consumption (mW)	| Current Draw (mA)	 | RAM Usage (Bytes)	| Flash Usage (Bytes) |
+|----------------------------|------------|------|-----|---------------|
 | Idle Mode	         | 10	                    | 2	                 |64                 |	4096                |
 | Active Mode	       | 150	                   | 30	                | 128	              | 8192                | 
 | Peak Current Draw	 | 300	                   | 60	                | 256	              | 12288               | 
