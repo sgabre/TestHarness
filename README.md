@@ -12,15 +12,60 @@ A Test Harness automates the execution, monitoring, and validation of tests in e
 
 #### Hardware
 
+- Power Supply
+- J-Link
+- Virtual COM/Debug Port (UART/ITM)
+- Microcontroller/Product Board
+
 #### Software
+
+- Compilator
+- CMake
+- Unity
+- CMock
+- Ceedling
+- Terminal ()
 
 ### Test Type
 
+-
+- 
+
+### Inputs
+
+- "Software Module" Code Sources
+- Software Low Level Design/Software Detailled Design (doxygen)
+
 ### Delivery
+
+- Unit Test Sources
+- FunctionUnitTestRunner.bin
+- Unit Test Report
+- Quality Report 
 
 ### Criterial
 
+- # Total Unit Test is greater or equal to Cyclomatic complexity
+-  For each Function, the Statement Coverage greater than 70%
+-  For each Function, the Branch Coverage greater than 70%
+
 ### Dashboard
+
+| Function                | Cyclomatic complexity | # Total | # Pass | # Fail | # Not Executed |
+|-------------------------|-----------------------|---------|--------|--------|----------------|
+| Module_PublicFunction   |   12                  |     14  |   12   |  1     |   1            |
+| Module_PrivateFunction  |   10                  |     5   |   3     |  1    |   3            | <= Issue
+
+| Function                | Statement Coverage    | Branch Coverage |
+|-------------------------|-----------------------|-----------------|
+| Module_PublicFunction   |   100 %               |         100 %   |
+| Module_PrivateFunction  |   100 %               |         100 %   |
+
+| Function                              | Code Size (Byte)      | RAM (Byte)            |
+|---------------------------------------|-----------------------|-----------------------|
+| Module_PublicFunctionUnitTestRunner   |   1024                |   35                  |
+| Module_PrivateFunctionUnitTestRunner  |   54                  |   64                  |
+
 
 
 # Workflow
