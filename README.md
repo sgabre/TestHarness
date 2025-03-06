@@ -45,7 +45,7 @@ A Test Harness automates the execution, monitoring, and validation of tests in e
 
 ### Criterial
 
-- # Total Unit Test is greater or equal to Cyclomatic complexity
+- Number of Total Unit Test is greater or equal to Cyclomatic complexity
 -  For each Function, the Statement Coverage greater than 70%
 -  For each Function, the Branch Coverage greater than 70%
 
