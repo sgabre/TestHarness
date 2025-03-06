@@ -33,8 +33,10 @@ The purpose of unit testing is to validate individual functions (Public & Privat
 
 #### Software
 
-1. Test Case Development 
-
+1. Test Case Development
+- doxygen
+- IDE (VS Code, STM32CubeIDE),
+  
 2. Test Execution
 - Compilator, 
 - CMake
@@ -111,6 +113,11 @@ The purpose of Component testing is to TBD
 
 #### Software
 
+1. Test Case Development
+- doxygen
+- IDE (VS Code, STM32CubeIDE),
+  
+2. Test Execution
 - Compilator, 
 - CMake
 - Unity
@@ -167,6 +174,11 @@ The purpose of Component testing is to TBD
 
 #### Software
 
+1. Test Case Development
+- doxygen
+- IDE (VS Code, STM32CubeIDE),
+  
+2. Test Execution
 - Compilator, 
 - CMake
 - Shelly
@@ -221,6 +233,11 @@ The purpose of Component testing is to TBD
 
 #### Software
 
+1. Test Case Development
+- doxygen
+- IDE (VS Code, STM32CubeIDE),
+  
+2. Test Execution
 - Compilator, 
 - CMake
 - Shelly
