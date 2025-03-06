@@ -8,6 +8,8 @@ A Test Harness automates the execution, monitoring, and validation of tests in e
 
 ### Scope
 
+The purpose of unit testing is to validate individual functions to ensure they work as expected in isolation. It helps detect and fix defects early in the development cycle, improving code quality, reliability, and maintainability.
+
 ### Testbench
 
 #### Hardware
@@ -19,7 +21,7 @@ A Test Harness automates the execution, monitoring, and validation of tests in e
 
 #### Software
 
-- Compilator
+- Compilator, 
 - CMake
 - Unity
 - CMock
@@ -28,8 +30,12 @@ A Test Harness automates the execution, monitoring, and validation of tests in e
 
 ### Test Type
 
--
-- 
+- Boundary Tests
+- Functional Tests
+- Structural Tests
+- Error Handling Tests
+- Performance Tests*
+- Regression Tests (Testbenc + CI)
 
 ### Inputs
 
@@ -66,6 +72,12 @@ A Test Harness automates the execution, monitoring, and validation of tests in e
 | Module_PublicFunctionUnitTestRunner   |   1024                |   35                  |
 | Module_PrivateFunctionUnitTestRunner  |   54                  |   64                  |
 
+
+
+| Function	                            | Execution Time (ms)	 | Memory Usage (Bytes)	 | Code Size (Bytes) | CPU Cycles    |
+|---------------------------------------|-----------------------|-----------------------|-------------------|---------------|
+| Module_PublicFunctionUnitTestRunner   |	1.2 ms	             | 512 B	                | 1024 B	         | 24000         |
+| Module_PrivateFunctionUnitTestRunner  | 0.8 ms	             | 256 B	                | 768 B             | 18000         |
 
 
 # Workflow
