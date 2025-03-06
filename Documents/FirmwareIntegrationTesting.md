@@ -9,6 +9,7 @@ The purpose of Firmware Integration Testing is to verify that individual firmwar
 #### Hardware
 
 - Power Supply
+- Power Measurement Equipment (e.g., Power Profiler Kit, Oscilloscope, Multimeter)
 - J-Link
 - Virtual COM/Debug Port (UART/ITM)
 - Product Board/Device Board
