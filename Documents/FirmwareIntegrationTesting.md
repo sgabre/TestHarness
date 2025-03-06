@@ -63,10 +63,20 @@ The purpose of Firmware Integration Testing is to verify that individual firmwar
 
 ### Dashboard*
 
+
+Module-Level Integration Summary
+
+| Integrated Modules        	| Test Cases	| Pass	| Fail| 	Not Executed |
+|----------------------------|------------|------|-----|---------------|
+| Communication (UART, I2C)	 |12	         | 10	  | 2   |	0             |
+| Sensor Data Processing	    |8	          |7	    |1	   |0              |
+| Memory Management	         |6	          |6	    |0	   |0              |
+
 Consumption Testing Results
-Condition	Power Consumption (mW)	Current Draw (mA)	RAM Usage (Bytes)	Flash Usage (Bytes)
-Idle Mode	10	2	64	4096
-Active Mode	150	30	128	8192
-Peak Current Draw	300	60	256	12288
+
+| Condition          |	Power Consumption (mW)	| Current Draw (mA)	 | RAM Usage (Bytes)	| Flash Usage (Bytes) |
+| Idle Mode	         | 10	                    | 2	                 |64                 |	4096                |
+| Active Mode	       | 150	                   | 30	                | 128	              | 8192                | 
+| Peak Current Draw	 | 300	                   | 60	                | 256	              | 12288               | 
 
  
