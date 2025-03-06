@@ -8,7 +8,7 @@ A Test Harness automates the execution, monitoring, and validation of tests in e
 2. Compilation
 4. Static & Dynamic Code Analysis
 5. Documentation
-6. Unit Testing
+6. [Unit Testing]()
 8. Component Testing
 9. Integration testing
 7. System testing
@@ -174,11 +174,13 @@ The purpose of Component testing is to TBD
 
 #### Software
 
-1. Test Case Development
+1. Test Analysis & Planning
+
+3. Test Case Development
 - doxygen
 - IDE (VS Code, STM32CubeIDE),
   
-2. Test Execution
+3. Test Execution
 - Compilator, 
 - CMake
 - Shelly
