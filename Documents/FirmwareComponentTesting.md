@@ -2,7 +2,7 @@
 
 ### Scope
 
-The purpose of Component testing is to TBD
+The purpose of Component Testing is to verify the correctness, reliability, and performance of individual firmware components in isolation before integration into the complete system. This ensures that each component meets functional, structural, and quality requirements.
 
 ### Testbench
 
