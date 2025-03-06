@@ -2,7 +2,7 @@
 
 ### Scope
 
-The purpose of unit testing is to validate individual functions (Public & Private) to ensure they work as expected in isolation. It helps detect and fix defects early in the development cycle, improving code quality, reliability, and maintainability.
+The purpose of unit testing is to verified individual functions (Public & Private) to ensure they work as expected in isolation. It helps detect and fix defects early in the development cycle, improving code quality, reliability, and maintainability.
 
 ### Testbench
 
