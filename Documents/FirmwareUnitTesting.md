@@ -38,8 +38,8 @@ The purpose of unit testing is to validate individual functions (Public & Privat
 
 ### Inputs
 
-- "Software Module" Code Sources
-- Software Low Level Design/Software Detailled Design (doxygen for each function(s))
+- "Firmware Module" Code Sources
+- Firmware Low Level Design/Firmware Detailled Design (doxygen for each function(s))
 
 ### Delivery
 
