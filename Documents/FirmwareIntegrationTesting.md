@@ -19,7 +19,7 @@ The purpose of Firmware Integration Testing is to verify that individual firmwar
 1. Test Analysis & Planning
 * Define test objectives, strategies, and test coverage requirements
 3. Test Case Development
-  * doxygen
+  * doxygen - Documentation for firmware architecture and module design
   * IDE (VS Code, STM32CubeIDE),
   
 3. Test Execution
