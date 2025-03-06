@@ -33,6 +33,9 @@ The purpose of unit testing is to validate individual functions (Public & Privat
 
 #### Software
 
+1. Test Case Development 
+
+2. Test Execution
 - Compilator, 
 - CMake
 - Unity
