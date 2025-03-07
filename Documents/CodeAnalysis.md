@@ -1,4 +1,4 @@
-## Static & Dynamic CodeAnalysis
+## Static CodeAnalysis
 
 ### Scope
 
@@ -6,50 +6,41 @@ The purpose of Static Code Analysis is to detect defects, vulnerabilities, and c
 
 ### Testbench
 
-#### Hardware
-
-- Power Supply
-- J-Link
-- Virtual COM/Debug Port (UART/ITM)
-- Product Board/Device Board
-- Raspberry
-
-#### Software
-
-1. Test Case Development
-- doxygen
-- IDE (VS Code, STM32CubeIDE),
-  
-2. Test Execution
-- Compilator, 
-- CMake
-- Shelly
-- Python
- 
-### Test Type
-
-- Boundary Tests
-- Functional Tests
-- Structural Tests
-- Error Handling Tests*
-- Performance Tests*
-- Regression Tests (Testbenc + CI)
+- SonarQube, 
 
 ### Inputs
 
-- Integration Strategies
-- Software Component Code Sources
-- Software Architecture Design [Software Architecture, Functional Decoposition]
-- Software Detailled Design 
+- Code sources (repositories, branches)
+- Configuration files and static analysis rules
 
 ### Delivery
 
-- Code Sources
-- SystemSoftware.bin
-- System Test Report
-- Quality Report 
+Quality Report: A comprehensive report detailing the findings of the static code analysis, including:
+- Detected vulnerabilities
+- Code smells
+- Maintainability issues
+- Security risks
+- Performance concerns
 
 ### Criterial
 
-### Dashboard*
+- Compliance with defined coding standards
+- Maintainability and readability score
+- Number of critical, major, and minor issues detected
+- Security vulnerabilities identified and resolved
+- Performance metrics and optimization recommendations
+
+### Dashboard
+
+Visual representation of the analysis results, including:
+
+Code quality score
+
+Technical debt estimation
+
+Trend analysis over time
+
+Issue categorization (security, maintainability, performance, etc.)
+
+Comparison of code quality across different versions or branches
  
