@@ -94,4 +94,5 @@ Note:
 - Memory Leak Detection in an RTOS Environment
 - Static Memory Analysis
 - Custom memory management
+- Stack Overflow Checking
  
