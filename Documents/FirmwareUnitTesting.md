@@ -17,7 +17,7 @@ The purpose of unit testing is to verified individual functions (Public & Privat
 
 1. Test Case Development
 - doxygen
-- IDE (VS Code, STM32CubeIDE),
+- IDE (VS Code)
   
 2. Test Execution
 - Compilator, 
@@ -26,6 +26,8 @@ The purpose of unit testing is to verified individual functions (Public & Privat
 - CMock
 - Ceedling
 - Terminal ()
+- Valgrind: A tool that detects memory leaks by tracking memory allocations and deallocations.
+- AddressSanitizer: A runtime memory error detector.
 
 ### Test Type
 
