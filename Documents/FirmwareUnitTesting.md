@@ -30,7 +30,6 @@ The purpose of unit testing is to verify individual functions (public and privat
 - CMock: Mocking library used in conjunction with Unity to create mocks for functions, allowing isolation of the unit under test.
 - Ceedling: A testing framework that integrates Unity and CMock, providing an environment for testing and organizing test cases.
 - Terminal: Command-line interface to execute tests and view results.
-- Valgrind: A runtime tool for detecting memory leaks by tracking memory allocations and deallocations during test execution.
 - AddressSanitizer: A runtime memory error detector that identifies issues such as buffer overflows, use-after-free errors, and memory corruption during test execution.
 
 ### Test Type
