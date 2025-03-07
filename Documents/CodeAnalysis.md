@@ -2,7 +2,7 @@
 
 ### Scope
 
-The purpose of Component testing is to TBD
+The purpose of Static Code Analysis is to detect defects, vulnerabilities, and code quality issues without executing the program. This process ensures adherence to coding standards, improves maintainability, and reduces technical debt by analyzing the source code for patterns of errors, inefficiencies, and security risks.
 
 ### Testbench
 
