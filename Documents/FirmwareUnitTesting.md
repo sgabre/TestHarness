@@ -4,6 +4,8 @@
 
 The purpose of unit testing is to verify individual units (including both public and private functions) to ensure they work as expected in isolation. It helps detect and fix defects early in the development cycle, thereby improving code quality, reliability, and maintainability.
 
+The purpose of unit testing is to verify individual functions (public and private) to ensure they work as expected in isolation. It helps detect and fix defects early in the development cycle, improving code quality, reliability, and maintainability.
+
 ### Testbench
 
 #### Hardware
