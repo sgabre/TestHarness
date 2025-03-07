@@ -81,4 +81,13 @@ The purpose of unit testing is to verify individual functions (public and privat
 |---------------------------------------|-----------------------|-----------------------|-------------------|---------------|
 | Module_PublicFunctionUnitTestRunner   |	1.2 ms	             | 512 B	                | 1024 B	         | 24000         |
 | Module_PrivateFunctionUnitTestRunner  | 0.8 ms	             | 256 B	                | 768 B             | 18000         |
+
+
+Note:
+
+- Measuring stack usage with -fstack-usage
+- Runtime analysis with stack painting
+- Runtime analysis with GDB single-stepping
+- Tracking Firmware Code Size
+- puncover
  
