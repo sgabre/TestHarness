@@ -90,4 +90,8 @@ Note:
 - Runtime analysis with GDB single-stepping
 - Tracking Firmware Code Size
 - puncover
+- Bounds Checking on Buffers
+- Memory Leak Detection in an RTOS Environment
+- Static Memory Analysis
+- Custom memory management
  
