@@ -7,8 +7,6 @@ The purpose of Static Code Analysis is to detect defects, vulnerabilities, and c
 ### Tools
 
 - SonarQube: A platform for continuous inspection of code quality, detecting issues such as bugs, vulnerabilities, and code smells.
-- Valgrind: A tool that detects memory leaks by tracking memory allocations and deallocations.
-- AddressSanitizer: A runtime memory error detector.
 
 ### Inputs
 
