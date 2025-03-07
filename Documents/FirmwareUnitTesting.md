@@ -20,14 +20,15 @@ The purpose of unit testing is to verified individual functions (Public & Privat
 - IDE (VS Code)
   
 2. Test Execution
-- Compilator, 
-- CMake
-- Unity
-- CMock
-- Ceedling
-- Terminal ()
-- Valgrind: A tool that detects memory leaks by tracking memory allocations and deallocations.
-- AddressSanitizer: A runtime memory error detector.
+
+- Compiler: Converts the source code and test cases into executable files.
+- CMake: Build system to manage and automate the compilation and testing process.
+- Unity: Unit testing framework designed for C/C++ that simplifies the creation and execution of test cases.
+- CMock: Mocking library used in conjunction with Unity to create mocks for functions, allowing isolation of the unit under test.
+- Ceedling: A testing framework that integrates Unity and CMock, providing an environment for testing and organizing test cases.
+- Terminal: Command-line interface to execute tests and view results.
+- Valgrind: A runtime tool for detecting memory leaks by tracking memory allocations and deallocations during test execution.
+- AddressSanitizer: A runtime memory error detector that identifies issues such as buffer overflows, use-after-free errors, and memory corruption during test execution.
 
 ### Test Type
 
