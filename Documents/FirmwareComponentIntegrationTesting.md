@@ -2,7 +2,8 @@
 
 ### Scope
 
-The purpose of unit testing is to verify the functionality and performance of individual firmware components and ensure their integration within the system is correct. The goal is to identify defects early in the development cycle, validate the interaction between components, and confirm that the firmware meets the required specifications.
+The purpose of Component Integration Testing is to verify that software components, after being tested in isolation, work together correctly within the system. This testing occurs after component testing to ensure that components, which may be specified by different groups at different times, integrate seamlessly. Both positive and negative cases are important, as components may make assumptions about data, and negative testing helps uncover issues caused by erroneous or unexpected data.
+
 
 ### Testbench
 
