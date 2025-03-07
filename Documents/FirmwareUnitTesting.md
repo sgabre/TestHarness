@@ -10,7 +10,7 @@ The purpose of unit testing is to verified individual functions (Public & Privat
 
 - Power Supply: Provides the necessary power to the microcontroller board and other components during testing.
 - J-Link: A debug probe that facilitates communication between the test environment and the microcontroller, enabling debugging and flashing.
-- Virtual COM/Debug Port (UART/ITM): Communication interface used for sending and receiving data between the device under test and the test environment, allowing monitoring and debugging.
+- Debug Port (UART/ITM): Communication interface used for receiving test results from the device, enabling monitoring and debugging. 
 - Board(s): The hardware platform running the firmware under test, which could be a specific development or production board used for testing.
 
 #### Software
