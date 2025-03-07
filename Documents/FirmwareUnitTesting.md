@@ -16,8 +16,9 @@ The purpose of unit testing is to verified individual functions (Public & Privat
 #### Software
 
 1. Test Case Development
-- doxygen
-- IDE (VS Code)
+
+- Doxygen: Documentation generation tool to create detailed descriptions of the codebase and individual functions.
+- IDE (e.g., VS Code): Integrated development environment for writing, editing, and managing test cases.
   
 2. Test Execution
 
