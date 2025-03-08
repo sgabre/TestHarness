@@ -13,7 +13,7 @@ A Test Harness automates the execution, monitoring, and validation of tests in e
 9. [Integration testing](./Documents/FirmwareIntegrationTesting.md)
 7. [System testing](./Documents/FirmwareSystemTesting.md)
 8. [Acceptance testing](./Documents/FirmwareAcceptanceTesting.md)
-9.  Package
+9. [Package](./Documents/FirmwarePackage.md)
 10. Release
 
 
