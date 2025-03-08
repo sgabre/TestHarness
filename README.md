@@ -7,7 +7,7 @@ A Test Harness automates the execution, monitoring, and validation of tests in e
 1. Checkout Code
 2. Compilation
 4. [Static & Dynamic Code Analysis](./Documents/CodeAnalysis.md)
-5. Documentation
+5. [Documentation](./Documents/Documentation.md)
 6. [Unit Testing](./Documents/FirmwareUnitTesting.md)
 8. [Component Testing](./Documents/FirmwareComponentTesting.md)
 9. [Integration testing](./Documents/FirmwareIntegrationTesting.md)
