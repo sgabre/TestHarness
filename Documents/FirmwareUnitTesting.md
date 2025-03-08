@@ -30,6 +30,7 @@ The purpose of unit testing is to verify individual functions (public and privat
 - CMock: Mocking library used in conjunction with Unity to create mocks for functions, allowing isolation of the unit under test.
 - Ceedling: A testing framework that integrates Unity and CMock, providing an environment for testing and organizing test cases.
 - Terminal: Command-line interface to execute tests and view results.
+- Code Coverage (gcov): A tool that tracks which parts of the code are executed during testing. 
 
 ### Test Type
 
