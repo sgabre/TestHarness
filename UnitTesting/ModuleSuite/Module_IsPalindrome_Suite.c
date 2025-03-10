@@ -2,6 +2,14 @@
 
 #include "Module.h"
 
+void setUp(void)
+{
+}
+
+void tearDown(void)
+{
+}
+
 // Boudery Case: INVALID_PARAM(str Pointer is NULL)
 void test_Module_IsPalindrome_1(void)
 {

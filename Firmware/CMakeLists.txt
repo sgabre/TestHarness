@@ -1,26 +1,25 @@
-cmake_minimum_required(VERSION 3.15)
+#/TestHarness/Firmware/CMakeLists.txt
 
-SET(APPLICATION_NAME Sample)
+if(NOT CMAKE_BUILD_TYPE STREQUAL UnitTesting)
+    # Include the Version.cmake file
+    include(${CMAKE_SOURCE_DIR}/Resources/Git.cmake)
+    
+    # Now you can use the version information
+    message(STATUS "CMAKE_PROJECT_NAME: ${CMAKE_PROJECT_NAME}")
+    message(STATUS "CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
+    message(STATUS "MAJOR_VERSION: ${PROJECT_VERSION_MAJOR}")
+    message(STATUS "MINOR_VERSION: ${PROJECT_VERSION_MINOR}")
+    message(STATUS "PATCH_VERSION: ${PROJECT_VERSION_PATCH}")
+    message(STATUS "Git Revision: ${BUILD_GIT_REVISION}")
+    message(STATUS "Build Date: ${BUILD_DATE}")
+    
+    # Now, configure the info.h.in file to create info.h with actual values
+    configure_file(${CMAKE_CURRENT_LIST_DIR}/CMake/Version.h.in ${CMAKE_BINARY_DIR}/Application/Version.h)
+    include_directories(${CMAKE_BINARY_DIR}/Application)
 
-# set the project name and version
-project(${APPLICATION_NAME} VERSION 1.0.0)
-
-
-
-
-#set(TARGET_GROUP production CACHE STRING "Group to build")
+    add_subdirectory(Application)
+endif()
 
 add_subdirectory(Module)
-add_subdirectory(Protocol)
+add_subdirectory(Memory)
 add_subdirectory(Shell)
-
-#if(TARGET_GROUP STREQUAL production)
-#    add_subdirectory(Application)
-#elseif(TARGET_GROUP STREQUAL test)
-    include(CTest)
-
-    add_subdirectory(external)
-    add_subdirectory(UnitTesting)
-#else()
-#    message(FATAL_ERROR "Given TARGET_GROUP unknown")
-#endif()

@@ -1,3 +1,4 @@
-#add_subdirectory(ModuleSuite)
-#add_subdirectory(ProtocolSuite)
-add_subdirectory(ShellSuite)
+#/TestHarness/UnitTesting/CMakeLists.txt
+
+#add_subdirectory(ShellSuite)
+add_subdirectory(ModuleSuite)

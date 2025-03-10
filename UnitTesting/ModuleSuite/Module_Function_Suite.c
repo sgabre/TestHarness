@@ -2,6 +2,14 @@
 
 #include <Module.h>
 
+void setUp(void)
+{
+}
+
+void tearDown(void)
+{
+}
+
 void test_Module_Function_1(void)
 {
     TEST_ASSERT_EQUAL_HEX8(40, Module_Function(30, 40, 50));
