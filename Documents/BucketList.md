@@ -1,29 +1,124 @@
-## Certifications ISTQB selon les rôles et responsabilités  
+# The Bucket List
 
-| **Certification Level**          | **Typical Roles**                     | **Key Responsibilities**                                              |
-|----------------------------------|--------------------------------------|-----------------------------------------------------------------------|
-| **Foundation Level (CTFL)**      | Testers, Developers, Test Analysts  | Basic testing concepts, test case design, defect reporting, and test execution. |
-| **Agile Tester (CTFL-AT)**       | Agile Testers, Developers, Scrum Teams | Agile testing principles, exploratory testing, collaboration in Agile teams. |
-| **Advanced Test Analyst (CTAL-TA)** | Test Analysts, QA Engineers        | Risk-based testing, advanced test techniques, usability & performance testing. |
-| **Advanced Test Manager (CTAL-TM)** | Test Managers, QA Leads             | Test planning, risk management, team leadership, process improvement. |
-| **Advanced Technical Test Analyst (CTAL-TTA)** | Test Automation Engineers, Performance Testers | Test automation, performance testing, white-box testing, security testing. |
-| **Expert Level - Test Management** | Senior Test Managers, Test Directors | Test strategy, test governance, ROI analysis, high-level test process improvement. |
-| **Expert Level - Improving the Test Process** | Process Consultants, Test Process Engineers | Test process optimization, maturity models, process improvement strategies. |
+Here the stuff that i want to put in place:
 
----
+# Source Code
 
-## Certifications ISTQB recommandées par rôle  
+- [] Set up a Host Basic Project 
+- [] Set up a Bare-Metal System Basic Project 
+- [] Set up a RTOS Basic Project 
 
-| **Rôle**                          | **Certifications ISTQB Recommandées**                                      |
-|-----------------------------------|---------------------------------------------------------------------------|
-| **Testeur Junior / Développeur**   | - **ISTQB Foundation Level (CTFL)**                                       |
-| **Testeur Agile**                  | - **ISTQB Foundation Level (CTFL)**  + **ISTQB Agile Tester (CTFL-AT)**   |
-| **Test Analyste**                  | - **ISTQB Foundation Level (CTFL)**  + **ISTQB Advanced Test Analyst (CTAL-TA)**  |
-| **Test Manager / QA Lead**         | - **ISTQB Foundation Level (CTFL)**  + **ISTQB Advanced Test Manager (CTAL-TM)**  |
-| **Ingénieur en Automatisation**     | - **ISTQB Foundation Level (CTFL)**  + **ISTQB Advanced Technical Test Analyst (CTAL-TTA)** |
-| **Testeur de Performance**         | - **ISTQB Foundation Level (CTFL)**  + **ISTQB Advanced Technical Test Analyst (CTAL-TTA)**  |
-| **Testeur en Sécurité**            | - **ISTQB Foundation Level (CTFL)**  + **ISTQB Advanced Security Tester**  |
-| **Consultant en Test**             | - **ISTQB Foundation Level (CTFL)**  + **ISTQB Advanced Test Manager (CTAL-TM)**  + **ISTQB Expert Level – Test Management** |
-| **Responsable Processus de Test**  | - **ISTQB Foundation Level (CTFL)**  + **ISTQB Advanced Test Manager (CTAL-TM)**  + **ISTQB Expert Level – Improving the Test Process** |
-| **Architecte de Test**             | - **ISTQB Foundation Level (CTFL)**  + **ISTQB Advanced Technical Test Analyst (CTAL-TTA)**  + **ISTQB Advanced Test Analyst (CTAL-TA)**  |
-| **Testeur en Intelligence Artificielle** | - **ISTQB Foundation Level (CTFL)**  + **ISTQB AI Testing (CT-AI)** |
+# Basic Setup/Steps ?
+
+- [] J-Tag ?
+- [] Blinky ?
+- [] Tracy ?
+- [] Shelly ?
+- [] Faulty ?
+- [] Perfy ?
+- [] CI/CD ?
+
+# C vs C++ 
+
+- [] Host ?
+- [] Bare-Metal System ?
+- [] RTOS ?
+- [] CLI ?
+
+# Process/Software Developement/Test Life Cycle
+- [] How to ...
+
+# Documentation
+- [] How to Use/Make Markdown ?
+- [] How to Use/Make Doxygen ?
+  
+- [] How to Use/Make Reports ?
+- [] How to Use/Make Wiki ?
+- [] How to Use/Make Sphinx ?
+- [] How to Use/Make Tracability ?
+
+# Documentation Extra
+
+- [] How to Use/Make Blog
+- [] How to Use/Make Video ?
+- [] How to Use/Make Presentation ?
+
+# ISTQB
+
+- [] Static Code Analysis ready to use (Host, Target)
+- [] Unit Testing Framwork ready to use (Host, Target)
+- [] Component Testing Framwork ready to use (Host, Target)
+- [] Component Integration Testing Framwork ready to use (Host, Target)
+- [] System Integration Testing Framwork ready to use (Host, Target)
+- [] System Testing Framwork ready to use (Host, Target)
+- [] Acceptance Testing Framwork ready to use (Host, Target)
+
+# Tools
+
+- [] How to Use doxygen 
+- [] How to Use Markdown  
+- [] How to Use CMake 
+- [] How to Use PlantUML, Wizard, ...
+- [] How to Use STM32CubeIDE ?
+- [] How to Use STM32CubeMX ?
+- [] How to Use STM32CubeProgrammer ?
+- [] How to Use STM32TrustedPackageCreator ?
+- [] How to Use/Make Software Component Package (Source/Libray/Relase/Debug)?
+- [] How to Use/Make Software Board Package (Source/Libray/Relase/Debug)?
+- [] How to Use/Make Package (Delivery, Update, Configuration, Support, Park)?
+- [] How to Use VS Code ?
+- [] How to Use VS Code + Docker (DevContainer) ?
+- [] How to Use VS Code + Docker (DevContainer On Raspberry/Remotlly) ?
+- [] How to Use/make Semihosting (UART, ITM, ...)
+- [] How to Use/make Code Coverage (Host, Target)
+
+# Performence 
+
+- [] Code Size Python, Measuring, Reporting, Dashboard
+- [] Performence Python, Measuring, Reporting, Dashboard
+- [] Power Supply Python, Measuring, Reporting, Dashboard
+- [] Logic Analyser Python, Measuring, Reporting, Dashboard
+
+# DevTools 
+
+- [] How to compile/encapsulate embedded Source in DLL ?
+- [] How to make a CLI ?
+
+# Software Component C/C++ ?
+
+- [] Protocol (Request, Answer-To-Request, Command, File Transfert)?
+- [] Storage (SQLite, File, Basic, FIFO, Queue, Array, List)?
+- [] State Machine (FSM, HSM) ?
+- [] Safty & Security (Encryption, Self-Test) ?
+
+# Testbench 
+
+- [] How to make a testbench ?
+
+# Hardware In Loop 
+
+- [] Hardware In Loop Python, Measuring, Reporting, Dashboard
+- [] UART Hardware In Loop Python, Measuring, Reporting, Dashboard
+- [] I2C Hardware In Loop Python, Measuring, Reporting, Dashboard
+- [] SPI Hardware In Loop Python, Measuring, Reporting, Dashboard
+- [] CAN Hardware In Loop Python, Measuring, Reporting, Dashboard
+- [] Radio Hardware In Loop Python, Measuring, Reporting, Dashboard
+- [] Bluetooth Hardware In Loop Python, Measuring, Reporting, Dashboard
+- [] IrDA Hardware In Loop Python, Measuring, Reporting, Dashboard
+- [] NFC Hardware In Loop Python, Measuring, Reporting, Dashboard
+
+# GitLab  
+
+  - Set up your code, 
+  - Invite your colleagues, 
+  - Set up your first project's CI/CD,  
+  - Start a free trial of GitLab Ultimate
+  - Add code owners 
+  - Enable require merge approvals 
+  - Create an issue
+  - Submit a merge request (MR)
+  - Scan dependencies for licenses 
+  - Scan dependencies for vulnerabilities
+  - Analyze your application for vulnerabilities with DAST 
+
+# GitHub
