@@ -8,6 +8,11 @@ if(NOT CMAKE_BUILD_TYPE)
     message(STATUS "CMAKE_BUILD_TYPE not defined, defaulting to Debug.")
 endif()
 
+# Ensure the ....
+option(TEST_TYPE "Select the test type (UnitTesting, IntegrationTesting, etc.)" "None")
+message(STATUS "Test Type: ${TEST_TYPE}")
+
+
 # Ensure the Libraries directory exists before installation
 set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/Libraries)
 
@@ -33,12 +38,40 @@ message(STATUS "CXX Flags: ${CMAKE_CXX_FLAGS}")
 add_subdirectory(Firmware)
 
 # Conditionally add Unity and UnitTesting when the build type is UnitTesting
-if(CMAKE_BUILD_TYPE STREQUAL UnitTesting)
+if(TEST_TYPE STREQUAL "UnitTesting")
     message(STATUS "Unit Testing build type detected!")
     enable_testing()
-    include(./Resources/Unity.cmake)
-    add_subdirectory(UnitTesting)
+    include(${CMAKE_SOURCE_DIR}/.cmake/Unity/Unity.cmake)
+    add_subdirectory(Tests/UnitTesting)
 endif()
 
+if(TEST_TYPE STREQUAL "ComponentTesting")
+    message(STATUS "Component Testing build type detected!")
+endif()
+
+if(TEST_TYPE STREQUAL "ComponentIntegrationTesting")
+    message(STATUS "Component Integration Testing build type detected!")
+endif()
+
+if(TEST_TYPE STREQUAL "SystemIntegrationTesting")
+    message(STATUS "System Integration Testing build type detected!")
+endif()
+
+if(TEST_TYPE STREQUAL "SystemTesting")
+    message(STATUS "System Integration Testing build type detected!")
+endif()
+
+#if(TEST_TYPE STREQUAL "AcceptanceTesting")
+    message(STATUS "Acceptance Integration Testing build type detected!")
+    add_test(
+    NAME AcceptanceTesting
+    COMMAND ${CMAKE_COMMAND} -E env ROBOT_SYSLOG=NONE robot --exitonfailure --outputdir ${CMAKE_SOURCE_DIR}/tests/Reports/AcceptanceTesting ${CMAKE_SOURCE_DIR}/tests/AcceptanceTesting
+)
+#endif()
 
 install(TARGETS Module)
+
+
+
+
+
