@@ -128,7 +128,7 @@ static eModuleError mModule_PrivateFunction(uint8_t aAddr, size_t* aSize, uint8_
     return Error;
 }
 
-void mModule_SetState(uint8_t aState)
+static void mModule_SetState(uint8_t aState)
 {
     if(aState < MODULE_NB_STATE)
     {
@@ -136,7 +136,7 @@ void mModule_SetState(uint8_t aState)
     }
 }
 
-void mModule_AState(uint8_t event)
+static void mModule_AState(uint8_t event)
 {
     switch(event)
     {
@@ -150,7 +150,7 @@ void mModule_AState(uint8_t event)
     }
 }
 
-void mModule_BState(uint8_t event)
+static void mModule_BState(uint8_t event)
 {
     switch(event)
     {
@@ -164,7 +164,7 @@ void mModule_BState(uint8_t event)
     }
 }
 
-void mModule_CState(uint8_t event)
+static void mModule_CState(uint8_t event)
 {
     switch(event)
     {
@@ -178,7 +178,7 @@ void mModule_CState(uint8_t event)
     }
 }
 
-void mModule_DState(uint8_t event)
+static void mModule_DState(uint8_t event)
 {
     switch(event)
     {
@@ -192,7 +192,7 @@ void mModule_DState(uint8_t event)
     }
 }
 
-void mModule_EState(uint8_t event)
+static void mModule_EState(uint8_t event)
 {
     switch(event)
     {
@@ -206,7 +206,7 @@ void mModule_EState(uint8_t event)
     }
 }
 
-void mModule_FState(uint8_t event)
+static void mModule_FState(uint8_t event)
 {
     switch(event)
     {
@@ -220,7 +220,7 @@ void mModule_FState(uint8_t event)
     }
 }
 
-void mModule_GState(uint8_t event)
+static void mModule_GState(uint8_t event)
 {
     switch(event)
     {
@@ -234,7 +234,7 @@ void mModule_GState(uint8_t event)
     }
 }
 
-void mModule_HState(uint8_t event)
+static void mModule_HState(uint8_t event)
 {
     switch(event)
     {
@@ -249,7 +249,7 @@ void mModule_HState(uint8_t event)
 }
 
 //Base on: https://uu.diva-portal.org/smash/get/diva2:1776033/FULLTEXT01.pdf
-void mModule_StateMachine(void)
+static void mModule_StateMachine(void)
 {
     uint8_t event = 0;
     
@@ -299,38 +299,8 @@ void mModule_StateMachine(void)
 /*== Public Module Functions ================================================*/
 /*============================================================================*/
 
-int8_t Module_Function(int8_t a, int8_t b, int8_t c)
+int8_t Module_PublicFunction(int8_t a, int8_t b, int8_t c)
 {
     return (int8_t)(((int16_t)a + (int16_t)b + (int16_t)c) / 3);
 }
 
-
-
-bool Module_IsPalindrome(const char *str) 
-{
-    if (str == NULL) 
-        return false;  // Vérification de sécurité
-    
-    const char *debut = str;  
-    const char *fin = str + strlen(str) - 1;
-    
-    while (debut < fin) 
-        {
-            // Ignorer les espaces et caractères non alphanumériques
-            while (debut < fin && !isalnum((unsigned char)*debut)) 
-                debut++;
-            while (debut < fin && !isalnum((unsigned char)*fin)) 
-                fin--;
-            
-            // Comparaison insensible à la casse
-            if (tolower((unsigned char)*debut) != tolower((unsigned char)*fin)) 
-                {
-                    return false;  // Pas un palindrome
-                }
-            
-            debut++;
-            fin--;
-        }
-    
-    return true;  // C'est un palindrome
-}

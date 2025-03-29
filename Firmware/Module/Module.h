@@ -45,7 +45,7 @@ typedef enum
  *
  * @return     		MODULE_NO_ERROR, when no error occurs.
  */
-int8_t Module_Function(int8_t a, int8_t b, int8_t c);
+int8_t Module_PublicFunction(int8_t a, int8_t b, int8_t c);
 
 
 /// @} // end of Group
