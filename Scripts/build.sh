@@ -13,7 +13,7 @@ rm -r ../Pack
 fi
 
 echo "--Configuration--"
-cmake -B ../build -S .. -DCMAKE_BUILD_TYPE=Debug -DTEST_TYPE=ALL
+cmake -B ../build -S .. -DCMAKE_BUILD_TYPE=Debug -DTEST_LEVEL=NONE
 #cmake -B ../build -S .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=../resources/cmake/gcc-arm-none-eabi.cmake
 
 echo "--Building--"

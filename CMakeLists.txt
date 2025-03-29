@@ -9,8 +9,8 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 
 # Ensure the ....
-option(TEST_TYPE "Select the test type (UnitTesting, IntegrationTesting, etc.)" "None")
-message(STATUS "Test Type: ${TEST_TYPE}")
+option(TEST_LEVEL "Select the test type (UnitTesting, IntegrationTesting, etc.)" "None")
+message(STATUS "Test Type: ${TEST_LEVEL}")
 
 
 # Ensure the Libraries directory exists before installation
@@ -38,34 +38,34 @@ message(STATUS "CXX Flags: ${CMAKE_CXX_FLAGS}")
 add_subdirectory(Firmware)
 
 # Enable testing globally if any tests are to be included
-if(NOT TEST_TYPE STREQUAL "NONE")
+if(NOT TEST_LEVEL STREQUAL "NONE")
     enable_testing()
 endif()
 
 # Conditionally add Unity and UnitTesting when the build type is UnitTesting
-if(TEST_TYPE STREQUAL "ALL" OR TEST_TYPE STREQUAL "UnitTesting")
+if(TEST_LEVEL STREQUAL "ALL" OR TEST_LEVEL STREQUAL "UNIT")
     message(STATUS "Unit Testing build type detected!")
     include(${CMAKE_SOURCE_DIR}/.cmake/Unity/Unity.cmake)
     add_subdirectory(Tests/UnitTesting)
 endif()
 
-if(TEST_TYPE STREQUAL "ALL" OR TEST_TYPE STREQUAL "ComponentTesting")
+if(TEST_LEVEL STREQUAL "ALL" OR TEST_LEVEL STREQUAL "COMPONENT")
     message(STATUS "Component Testing build type detected!")
 endif()
 
-if(TEST_TYPE STREQUAL "ALL" OR TEST_TYPE STREQUAL "ComponentIntegrationTesting")
+if(TEST_LEVEL STREQUAL "ALL" OR TEST_LEVEL STREQUAL "CIT")
     message(STATUS "Component Integration Testing build type detected!")
 endif()
 
-if(TEST_TYPE STREQUAL "ALL" OR TEST_TYPE STREQUAL "SystemIntegrationTesting")
+if(TEST_LEVEL STREQUAL "ALL" OR TEST_LEVEL STREQUAL "SIT")
     message(STATUS "System Integration Testing build type detected!")
 endif()
 
-if(TEST_TYPE STREQUAL "ALL" OR TEST_TYPE STREQUAL "SystemTesting")
+if(TEST_LEVEL STREQUAL "ALL" OR TEST_LEVEL STREQUAL "SYSTEM")
     message(STATUS "System Integration Testing build type detected!")
 endif()
 
-if(TEST_TYPE STREQUAL "ALL" OR TEST_TYPE STREQUAL "AcceptanceTesting")
+if(TEST_LEVEL STREQUAL "ALL" OR TEST_LEVEL STREQUAL "VALIDATION")
     message(STATUS "Acceptance Integration Testing build type detected!")
     add_test(
     NAME AcceptanceTesting
