@@ -13,8 +13,8 @@ rm -r ../Pack
 fi
 
 echo "--Configuration--"
-cmake -B ../build -S .. -DCMAKE_BUILD_TYPE=Debug -DTEST_LEVEL=NONE
-#cmake -B ../build -S .. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=../resources/cmake/gcc-arm-none-eabi.cmake
+cmake -B ../build -S .. -DCMAKE_BUILD_TYPE=Debug -DTEST_LEVEL=UNIT
+#cmake -B ../build -S .. -DCMAKE_BUILD_TYPE=Debug -DTEST_LEVEL=NONE -DCMAKE_TOOLCHAIN_FILE=../resources/cmake/gcc-arm-none-eabi.cmake
 
 echo "--Building--"
 cmake --build ../build --config Debug 
@@ -48,6 +48,8 @@ cmake --install ../build --prefix "/Users/sgabre/git/TestHarness/Libraries/"
 #-ex "quit"
 
 echo "--Clean-up--"
+
+
 
 
 

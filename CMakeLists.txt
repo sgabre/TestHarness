@@ -34,18 +34,34 @@ message(STATUS "Linker: ${CMAKE_LINKER}")
 message(STATUS "C Flags: ${CMAKE_C_FLAGS}")
 message(STATUS "CXX Flags: ${CMAKE_CXX_FLAGS}")
 
+# Define UNIT_TEST_WRAPPER for unit testing
+#if(TEST_LEVEL STREQUAL "ALL" OR TEST_LEVEL STREQUAL "UNIT")
+if(NOT TEST_LEVEL STREQUAL "NONE")
+    add_definitions(-DUNIT_TEST_WRAPPER)
+endif()
+
 # Add Firmware subdirectory for all build types
 add_subdirectory(Firmware)
+
+
+include(${CMAKE_SOURCE_DIR}/.cmake/docs/doxygen.cmake)
 
 # Enable testing globally if any tests are to be included
 if(NOT TEST_LEVEL STREQUAL "NONE")
     enable_testing()
 endif()
 
+
 # Conditionally add Unity and UnitTesting when the build type is UnitTesting
 if(TEST_LEVEL STREQUAL "ALL" OR TEST_LEVEL STREQUAL "UNIT")
     message(STATUS "Unit Testing build type detected!")
+    
+
+    
+    # Include Unity CMake file
     include(${CMAKE_SOURCE_DIR}/.cmake/Unity/Unity.cmake)
+    
+     # Add the Unit Testing directory as a subdirectory
     add_subdirectory(Tests/UnitTesting)
 endif()
 
