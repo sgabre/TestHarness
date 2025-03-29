@@ -8,6 +8,9 @@ if(NOT CMAKE_BUILD_TYPE)
     message(STATUS "CMAKE_BUILD_TYPE not defined, defaulting to Debug.")
 endif()
 
+# Ensure the Libraries directory exists before installation
+set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/Libraries)
+
 # Define valid build types
 set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS Release Debug UnitTesting)
 
@@ -26,11 +29,6 @@ message(STATUS "Linker: ${CMAKE_LINKER}")
 message(STATUS "C Flags: ${CMAKE_C_FLAGS}")
 message(STATUS "CXX Flags: ${CMAKE_CXX_FLAGS}")
 
-
-
-
-
-
 # Add Firmware subdirectory for all build types
 add_subdirectory(Firmware)
 
@@ -42,6 +40,5 @@ if(CMAKE_BUILD_TYPE STREQUAL UnitTesting)
     add_subdirectory(UnitTesting)
 endif()
 
-# Ensure the Libraries directory exists before installation
-set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/Libraries)
+
 install(TARGETS Module)

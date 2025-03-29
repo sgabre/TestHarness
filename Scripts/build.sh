@@ -24,7 +24,7 @@ cmake --build ../build --config Debug
 ctest -C Debug -VV --test-dir ../build
 
 echo "--Deployement--"
-cmake --install ../build --prefix "/Users/sgabre/git/Sample/Install/"
+cmake --install ../build --prefix "/Users/sgabre/git/TestHarness/Libraries/"
 
 #echo "--Packing--"
 #cpack -G ZIP -C Debug --build-config Debug --config ../build/CPackConfig.cmake
