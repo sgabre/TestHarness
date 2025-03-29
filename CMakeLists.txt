@@ -37,37 +37,46 @@ message(STATUS "CXX Flags: ${CMAKE_CXX_FLAGS}")
 # Add Firmware subdirectory for all build types
 add_subdirectory(Firmware)
 
-# Conditionally add Unity and UnitTesting when the build type is UnitTesting
-if(TEST_TYPE STREQUAL "UnitTesting")
-    message(STATUS "Unit Testing build type detected!")
+# Enable testing globally if any tests are to be included
+if(NOT TEST_TYPE STREQUAL "NONE")
     enable_testing()
+endif()
+
+# Conditionally add Unity and UnitTesting when the build type is UnitTesting
+if(TEST_TYPE STREQUAL "ALL" OR TEST_TYPE STREQUAL "UnitTesting")
+    message(STATUS "Unit Testing build type detected!")
     include(${CMAKE_SOURCE_DIR}/.cmake/Unity/Unity.cmake)
     add_subdirectory(Tests/UnitTesting)
 endif()
 
-if(TEST_TYPE STREQUAL "ComponentTesting")
+if(TEST_TYPE STREQUAL "ALL" OR TEST_TYPE STREQUAL "ComponentTesting")
     message(STATUS "Component Testing build type detected!")
 endif()
 
-if(TEST_TYPE STREQUAL "ComponentIntegrationTesting")
+if(TEST_TYPE STREQUAL "ALL" OR TEST_TYPE STREQUAL "ComponentIntegrationTesting")
     message(STATUS "Component Integration Testing build type detected!")
 endif()
 
-if(TEST_TYPE STREQUAL "SystemIntegrationTesting")
+if(TEST_TYPE STREQUAL "ALL" OR TEST_TYPE STREQUAL "SystemIntegrationTesting")
     message(STATUS "System Integration Testing build type detected!")
 endif()
 
-if(TEST_TYPE STREQUAL "SystemTesting")
+if(TEST_TYPE STREQUAL "ALL" OR TEST_TYPE STREQUAL "SystemTesting")
     message(STATUS "System Integration Testing build type detected!")
 endif()
 
-#if(TEST_TYPE STREQUAL "AcceptanceTesting")
+if(TEST_TYPE STREQUAL "ALL" OR TEST_TYPE STREQUAL "AcceptanceTesting")
     message(STATUS "Acceptance Integration Testing build type detected!")
     add_test(
     NAME AcceptanceTesting
     COMMAND ${CMAKE_COMMAND} -E env ROBOT_SYSLOG=NONE robot --exitonfailure --outputdir ${CMAKE_SOURCE_DIR}/tests/Reports/AcceptanceTesting ${CMAKE_SOURCE_DIR}/tests/AcceptanceTesting
 )
-#endif()
+    # Define execution order
+    #set_tests_properties(AcceptanceTesting PROPERTIES DEPENDS "UnitTest1;UnitTest2")
+endif()
+
+
+
 
 install(TARGETS Module)
 
