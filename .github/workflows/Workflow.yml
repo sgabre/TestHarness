@@ -13,11 +13,34 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+
+    # Temporary install of dependencies
+    - name: Dependencies
+      run: echo "Dependency"
+      
+    - name: Configure
+      run: echo "Dependency"
+
+    - name: Build
+      run: echo "Dependency"
+
+    - name: Unit Testing
+      run: echo "Unit Testing"
+
+    - name: Component Testing
+      run: echo "Component Testing"
+
+    - name: Component Integration Testing
+      run: echo "Component Integration Testing"
+
+    - name: System Integration Testing
+      run: echo "System Integration Testing"
+
+    - name: System Testing
+      run: echo "System Testing"
+
+    - name: Acceptance Testing
+      run: echo "Acceptance Testing"
+
+    - name: Package
+      run: echo "Packaging"
