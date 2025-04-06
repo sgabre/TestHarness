@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//#include "Version.h"
+#include <Version.h>
 
 //#include <Module.h>
 
@@ -59,12 +59,11 @@ int main(void)
     #endif
     */
     #ifdef _FIRMWARE_INFORMATION_H_
-    printf("--Firmware--\n");
-    printf("%s - %s\n", APPLICATION_NAME, APPLICATION_CONFIG);
-    printf("Version: %s\n", FIRMWARE_VERSION);
+    printf("%s - %s - V%s\n", APPLICATION_NAME, APPLICATION_CONFIG, FIRMWARE_VERSION);
     printf("Revision ID: %s\n", REVISION_ID);
     printf("Build Date & Time: %s\n", BUILD_DATE);
-    printf("--Boards--\n");
+    printf("Compiler: %s - V%s\n", COMPILER_ID, COMPILER_VERSION);
+    //printf("--Boards--\n");
     //printf("Board Version: %s\n", HARDWARE_VERSION);
     #else
     printf("Hello Words\n");

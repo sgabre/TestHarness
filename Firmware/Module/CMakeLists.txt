@@ -46,3 +46,11 @@ install(TARGETS ${MODULE_NAME}
 
 # Ensure headers are installed properly
 install(FILES Module.h DESTINATION ${CMAKE_INSTALL_PREFIX}/inc)
+
+
+# Ensure parent directories are created first
+file(MAKE_DIRECTORY ${CMAKE_SOURCE_DIR}/Documents)
+file(MAKE_DIRECTORY ${CMAKE_SOURCE_DIR}/Documents/FirmwareLowLevelDesign)
+set(DOXYGEN_OUTPUT_DIR "${CMAKE_SOURCE_DIR}/Documents/FirmwareLowLevelDesign/Module")
+file(MAKE_DIRECTORY ${DOXYGEN_OUTPUT_DIR})
+

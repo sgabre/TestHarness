@@ -1,34 +1,38 @@
+#/TestHarness/UnitTesting/ModuleSuite/CMakeLists.txt
+
+# Find all unit test source files ending with _Suite.c
+file(GLOB SUITE_SOURCES *_Suite.c)
+
+# Loop over each test source and create a runner
+foreach(SUITE_FILE ${SUITE_SOURCES})
+    # Get the file name without extension and path
+    get_filename_component(SUITE_NAME ${SUITE_FILE} NAME_WE)
+
+    # Get the parent directory of the test suite file
+   # get_filename_component(PARENT_DIR ${CMAKE_CURRENT_SOURCE_DIR} NAME)
+
+    # Extract the first part of the directory name (e.g., 'ShellSuite' -> 'Shell')
+   # string(REGEX REPLACE "(.*Suite)" "\\1" MODULE_NAME ${PARENT_DIR})
+
+   # message(STATUS "MODULE_NAME: ${PARENT_DIR},  ${MODULE_NAME}")
 
 
-#add_executable(ShellInitSuiteApp Shell_Init_Suite.c)
-#target_link_libraries(ShellInitSuiteApp Shell Unity)
-#add_test(Shell_Init_Suite ShellInitSuiteApp)
+    # Create executable
+    add_executable(${SUITE_NAME} ${SUITE_FILE})
+
+    # Link with your test dependencies
+    target_link_libraries(${SUITE_NAME} PRIVATE Shell Unity)
+
+    # Link the module dynamically (e.g., 'ShellLib', 'ModuleALib') and Unity
+   # target_link_libraries(${SUITE_NAME} PRIVATE ${MODULE_NAME} Unity)
 
 
-#add_executable(ShellHandlerSuiteApp Shell_Handler_Suite.c)
-#target_link_libraries(ShellHandlerSuiteApp Shell Unity)
-#add_test(Shell_Handler_Suite ShellHandlerSuiteApp)
 
-#add_executable(ShellSizeSuiteApp Shell_Size_Suite.c)
-#target_link_libraries(ShellSizeSuiteApp Shell Unity)
-#add_test(Shell_Size_Suite ShellSizeSuiteApp)
+    # Register test with CTest
+    add_test(NAME ${SUITE_NAME} COMMAND ${SUITE_NAME})
 
-#add_executable(ShellCommandsSuiteApp Shell_Commands_Suite.c)
-#target_link_libraries(ShellCommandsSuiteApp Shell Unity)
-#add_test(Shell_Commands_Suite ShellCommandsSuiteApp)
+    # Optional: install it under bin/tests
+    install(TARGETS ${SUITE_NAME} RUNTIME DESTINATION bin/tests)
+endforeach()
 
-#add_executable(ShellRegisterSuiteApp Shell_Register_Suite.c)
-#target_link_libraries(ShellRegisterSuiteApp Shell Unity)
-#add_test(Shell_Register_Suite ShellRegisterSuiteApp)
 
-add_executable(ShellParseCommandSuiteApp Shell_ParseCommand_Suite.c)
-target_link_libraries(ShellParseCommandSuiteApp Shell Unity)
-add_test(Shell_ParseCommand_Suite ShellParseCommandSuiteApp)
-
-add_executable(ShellGetsSuiteApp Shell_Gets_Suite.c)
-target_link_libraries(ShellGetsSuiteApp Shell Unity)
-add_test(Shell_Gets_Suite ShellGetsSuiteApp)
-
-add_executable(ShellSearchCommandSuiteApp Shell_SearchCommand_Suite.c)
-target_link_libraries(ShellSearchCommandSuiteApp Shell Unity)
-add_test(Shell_SearchCommand_Suite ShellSearchCommandSuiteApp)

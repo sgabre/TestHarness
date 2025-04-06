@@ -4,7 +4,7 @@ project(TestHareness VERSION 0.0.0)
 
 if(NOT CMAKE_BUILD_TYPE)
     # Set a default build type if not defined
-    set(CMAKE_BUILD_TYPE Debug CACHE STRING "Choose the build type (Release, Debug, UnitTesting)" FORCE)
+    set(CMAKE_BUILD_TYPE Debug CACHE STRING "Choose the build type (Release, Debug)" FORCE)
     message(STATUS "CMAKE_BUILD_TYPE not defined, defaulting to Debug.")
 endif()
 
@@ -17,7 +17,7 @@ message(STATUS "Test Type: ${TEST_LEVEL}")
 set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/Libraries)
 
 # Define valid build types
-set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS Release Debug UnitTesting)
+set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
 
 # Display the current build type
 message(STATUS "CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
@@ -55,9 +55,7 @@ endif()
 # Conditionally add Unity and UnitTesting when the build type is UnitTesting
 if(TEST_LEVEL STREQUAL "ALL" OR TEST_LEVEL STREQUAL "UNIT")
     message(STATUS "Unit Testing build type detected!")
-    
-
-    
+        
     # Include Unity CMake file
     include(${CMAKE_SOURCE_DIR}/.cmake/Unity/Unity.cmake)
     

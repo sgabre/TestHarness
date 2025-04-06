@@ -16,8 +16,9 @@ if(NOT CMAKE_BUILD_TYPE STREQUAL UnitTesting)
     
     
     # Now, configure the info.h.in file to create info.h with actual values
-    configure_file(${CMAKE_SOURCE_DIR}/.cmake/Version/Version.h.in ${CMAKE_BINARY_DIR}/Application/Version.h)
-    include_directories(${CMAKE_BINARY_DIR}/Application)
+    configure_file(${CMAKE_SOURCE_DIR}/.cmake/Version/Version.h.in ${CMAKE_CURRENT_BINARY_DIR}/Application/Version.h)
+    
+    include_directories(${CMAKE_CURRENT_BINARY_DIR}/Application)
 
     add_subdirectory(Application)
 endif()

@@ -27,3 +27,7 @@ TARGET_LINK_LIBRARIES(TestHarness PRIVATE Module)
 
 # Include directories
 TARGET_INCLUDE_DIRECTORIES(TestHarness PRIVATE ${CMAKE_CURRENT_LIST_DIR})
+
+install(TARGETS TestHarness
+    RUNTIME DESTINATION bin
+)
