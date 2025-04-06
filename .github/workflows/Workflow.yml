@@ -1,0 +1,46 @@
+name: TestHarness CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    # Temporary install of dependencies
+    - name: Dependencies
+      run: echo "Dependency"
+      
+    - name: Configure
+      run: echo "Dependency"
+
+    - name: Build
+      run: echo "Dependency"
+
+    - name: Unit Testing
+      run: echo "Unit Testing"
+
+    - name: Component Testing
+      run: echo "Component Testing"
+
+    - name: Component Integration Testing
+      run: echo "Component Integration Testing"
+
+    - name: System Integration Testing
+      run: echo "System Integration Testing"
+
+    - name: System Testing
+      run: echo "System Testing"
+
+    - name: Acceptance Testing
+      run: echo "Acceptance Testing"
+
+    - name: Package
+      run: echo "Packaging"
