@@ -35,39 +35,18 @@ List of documents referenced in this specification:
 > Example: [REF: ARCH-XXX-DOC-0001]
  
   **[W137-FRS-ARCH-0001]** Requirement Short Name  
- @startuml
+  
+![image](./Images/W137-FRS-ARCH-0001.png)
 
-actor "Gateway" as Gateway
-actor "IZAR Radio Mobile" as Mobile
-actor "IZAR NFC Mobile" as Reader
-actor "Production \nEquipement" as Prod
-actor "Water Counter" as Counter
-
-rectangle "W137" as Board
-
-database "PDB" as DB
-
-Gateway -- Board : LoRaWAN
-Mobile -- Board : Radio Mobile (C2)
-Prod -L- Board : Serial Port
-Reader -R- Board : NFC
-Board -d- Counter : NFC
-
-DB -L- Prod : https
-
-@enduml
-
----
 
 ## 2. Functional Requirements
-
+---
 List of functional requirements associated with this feature/module.  
 
-
  **[W137-FRS-FUN-0001]** Requirement Short Name  
-  _Description of functional requirement_  
-  [REF HFN-XXX-DIE-000X] [STATUS ACTIVE] [REV XX]
----
+ _Description of functional requirement_  
+ [REF HFN-XXX-DIE-000X] [STATUS ACTIVE] [REV XX]
+
 
 ## 3. Operational Requirements
 
@@ -192,19 +171,19 @@ The shell shall allow interaction with the firmware by **setting and getting int
 
 [REF N/A]  [STATUS ACTIVE] [REV 02]
 
-**[W137-FRS-TST-0002] Shell - Simulate Fault**
+_[W137-FRS-TST-0002] Shell - Simulate Fault_
 
 The shell shall allow testers to **simulate fault conditions**, such as erroneous data or communication failures, and test the system's response.
 
 [REF N/A]  [STATUS ACTIVE] [REV 02]
 
-**[W137-FRS-TST-0002] Shell - Logging**
+_[W137-FRS-TST-0002] Shell - Logging_
 
 The shell shall provide **logging** of interactions and test results for post-test analysis.
 
 [REF N/A]  [STATUS ACTIVE] [REV 02]
 
-**[W137-FRS-TST-0002] Shell - Portable**
+_[W137-FRS-TST-0002] Shell - Portabl_
 
 The shell shall be **portable** and compatible with different platforms (e.g., STM32, Raspberry Pi, Linux development environment) to facilitate integration testing on target hardware or during firmware development.
 
@@ -250,19 +229,19 @@ This section defines the requirements necessary for the firmware to support prod
 
 - Description of data storage, integrity checks, redundancy
 
-[W137-FRS-NFR-0001] Application Binary - Naming Convention
+_[W137-FRS-NFR-0001] Application Binary - Naming Convention_
 
 The Application Firmware binary shall have this naming convention: W137A-VX.Y.Z-<RevisionID>.hex
 
 [REF N/A]  [STATUS ACTIVE] [REV 02]
 
-[W137-FRS-NFR-0002] Bootloader Binary - Naming Convention
+_[W137-FRS-NFR-0002] Bootloader Binary - Naming Convention_
 
 The Bootloader Firmware binary shall have this naming convention: W137B-VX.Y.Z-<RevisionID>.hex
 
 [REF N/A]  [STATUS ACTIVE] [REV 02]
 
-[W137-FRS-NFR-0002] W137 Image - Naming Convention
+_[W137-FRS-NFR-0002] W137 Image - Naming Convention_
 
 The W137 Image shall have this naming convention: W137-VX.Y.Z.hex
 
