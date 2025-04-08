@@ -43,6 +43,8 @@ They may propose modifications through the defined change control process.
 | **SWD**  | Serial Wire Debug – A two-wire protocol used for debugging ARM Cortex-M devices. |
 | **HAL**  | Hardware Abstraction Layer – A software layer that provides a consistent interface to hardware. |
 | **BSP**  | Board Support Package – A collection of drivers and configuration files tailored to a specific hardware board. |
+| **ITM**    | Instrumentation Trace Macrocell – Used for real-time data tracing in ARM Cortex-M. |
+| **CRC**    | Cyclic Redundancy Check – Error-detecting code used to detect changes in raw data. |
 
 ### 0.4 References
 
