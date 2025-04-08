@@ -24,7 +24,7 @@ List of documents referenced in this specification:
 
 | Name                                  | Reference                         |
 |-------------------------------------  |-----------------------------------|
-|  Systeme Architecture Design          | [W137-SAD](https://git-scm.com/)  |
+|  Systeme Architecture Design          | [REF-SAD](https://git-scm.com/)  |
 |  LoRaWAN® Certification Protocol      | [TS001-1.0.4 LoRaWAN® L2 1.0.4 Specification](https://git-scm.com/)  |
 
 
@@ -34,16 +34,16 @@ List of documents referenced in this specification:
 > Reference the system architecture document using the same denomination.  
 > Example: [REF: ARCH-XXX-DOC-0001]
  
-  **[W137-FRS-ARCH-0001]** Requirement Short Name  
+  **[REF-FRS-ARCH-0001]** Requirement Short Name  
   
-![image](./Images/W137-FRS-ARCH-0001.png)
+![image](./Images/REF-FRS-ARCH-0001.png)
 
 
 ## 2. Functional Requirements
 ---
 List of functional requirements associated with this feature/module.  
 
- **[W137-FRS-FUN-0001]** Requirement Short Name  
+ **[REF-FRS-FUN-0001]** Requirement Short Name  
  _Description of functional requirement_  
  [REF HFN-XXX-DIE-000X] [STATUS ACTIVE] [REV XX]
 
@@ -55,36 +55,26 @@ List of functional requirements associated with this feature/module.
 - Description of alarm, warning, and operator message sequences driven by the software system.
 - Description of user actions and system responses.
 
-**[W137-FRS-INT-0002] Requirement Short Name**
+**[REF-FRS-INT-0002] Requirement Short Name**
 
   _Description of Interaction for a functional requirement_ 
 
-@startuml
-autonumber 1.1.1
-Gateway -> W137: Authentication request
-W137 --> Gateway: Response
-@enduml
-
-[REF W137-SAD-XXXX] [STATUS ACTIVE] [REV 02]
+[REF REF-SAD-XXXX] [STATUS ACTIVE] [REV 02]
 
 
-**[W137-FRS-INT-0002] Requirement Short Name**
+**[REF-FRS-INT-0002] Requirement Short Name**
 
   _Description of functional requirement_ 
 
-@startuml
-autonumber 1.1.1
-Gateway -> W137: Read Memory Command(Address, Size)
-W137 --> Gateway: Read Memory Response(Data)
-@enduml
+![image](./Images/REF-FRS-INT-0002.png)
 
-[REF W137-SAD-XXXX] [STATUS ACTIVE] [REV 02]
+[REF REF-SAD-XXXX] [STATUS ACTIVE] [REV 02]
 
 ### 3.2 Interfaces
 
 Describe the links between the software system and other systems (e.g., hardware, external software, sensors).
 
- **[W137-FRS-INTF-0001]** Requirement Short Name  
+ **[REF-FRS-INTF-0001]** Requirement Short Name  
   _Description of Interface use by a functional requirement_  
   > e.g The Firmware shall communication with the IZAR Mobile over the NFC interfaces 
   [REF TBD] [STATUS ACTIVE] [REV XX]
@@ -108,7 +98,7 @@ Describe the links between the software system and other systems (e.g., hardware
 
 > State performance expectations like latency, throughput, timing, etc.
 
-[W137-FRS-PERF-0002] Requirement Short Name
+[REF-FRS-PERF-0002] Requirement Short Name
 
 The software shall respond to user input within `X ms`.
  [REF HFN-XXX-DIE-000X] [STATUS ACTIVE] [REV XX]
@@ -118,7 +108,7 @@ The software shall respond to user input within `X ms`.
 
 - Example: Triple redundancy for safety-critical parameters.
 
- **[W137-FRS-SFT-0001]** Requirement Short Name  
+ **[REF-FRS-SFT-0001]** Requirement Short Name  
   _Description of functional requirement_  
   [REF HFN-XXX-DIE-000X] [STATUS ACTIVE] [REV XX]
 
@@ -128,7 +118,7 @@ The software shall respond to user input within `X ms`.
 - Audit Trail
 - Data protection and secure communication
 
- **[W137-FRS-SECU-0001]** Requirement Short Name  
+ **[REF-FRS-SECU-0001]** Requirement Short Name  
   _Description of functional requirement_  
   [REF HFN-XXX-DIE-000X] [STATUS ACTIVE] [REV XX]
 
@@ -136,7 +126,7 @@ The software shall respond to user input within `X ms`.
 
 - Modularity for component-level updates and unit testing
 
- **[W137-FRS-MTN-0001]** Requirement Short Name  
+ **[REF-FRS-MTN-0001]** Requirement Short Name  
   _Description of functional requirement_  
   [REF HFN-XXX-DIE-000X] [STATUS ACTIVE] [REV XX]
 
@@ -145,7 +135,7 @@ The software shall respond to user input within `X ms`.
 - OS/Toolchain/language independence
 - Example: Code must compile on STM32 and Linux simulation environments
 
- **[W137-FRS-POR-0001]** Requirement Short Name  
+ **[REF-FRS-POR-0001]** Requirement Short Name  
   _Description of functional requirement_  
   [REF HFN-XXX-DIE-000X] [STATUS ACTIVE] [REV XX]
 
@@ -153,37 +143,37 @@ The software shall respond to user input within `X ms`.
 
 This section outlines the requirements for ensuring that the software system can be adequately tested throughout its lifecycle.
 
-[W137-FRS-TST-0001] Shell 
+[REF-FRS-TST-0001] Shell 
 
 The firmware shall include a **shell** for integration testing, allowing testers to interact with individual components or modules without needing to run the entire system. 
 
 [REF N/A]  [STATUS ACTIVE] [REV 02]
 
-**[W137-FRS-TST-0002] Shell - CLI**
+**[REF-FRS-TST-0002] Shell - CLI**
 
 The shell shall provide **command-line interface (CLI)** commands to initialize and configure modules for testing.
 
 [REF N/A]  [STATUS ACTIVE] [REV 02]
 
-**[W137-FRS-TST-0002] Shell - Setter/Getter**
+**[REF-FRS-TST-0002] Shell - Setter/Getter**
 
 The shell shall allow interaction with the firmware by **setting and getting internal states** of the components (e.g., configuration values, operational status).
 
 [REF N/A]  [STATUS ACTIVE] [REV 02]
 
-_[W137-FRS-TST-0002] Shell - Simulate Fault_
+_[REF-FRS-TST-0002] Shell - Simulate Fault_
 
 The shell shall allow testers to **simulate fault conditions**, such as erroneous data or communication failures, and test the system's response.
 
 [REF N/A]  [STATUS ACTIVE] [REV 02]
 
-_[W137-FRS-TST-0002] Shell - Logging_
+_[REF-FRS-TST-0002] Shell - Logging_
 
 The shell shall provide **logging** of interactions and test results for post-test analysis.
 
 [REF N/A]  [STATUS ACTIVE] [REV 02]
 
-_[W137-FRS-TST-0002] Shell - Portabl_
+_[REF-FRS-TST-0002] Shell - Portabl_
 
 The shell shall be **portable** and compatible with different platforms (e.g., STM32, Raspberry Pi, Linux development environment) to facilitate integration testing on target hardware or during firmware development.
 
@@ -229,21 +219,21 @@ This section defines the requirements necessary for the firmware to support prod
 
 - Description of data storage, integrity checks, redundancy
 
-_[W137-FRS-NFR-0001] Application Binary - Naming Convention_
+_[REF-FRS-NFR-0001] Application Binary - Naming Convention_
 
-The Application Firmware binary shall have this naming convention: W137A-VX.Y.Z-<RevisionID>.hex
-
-[REF N/A]  [STATUS ACTIVE] [REV 02]
-
-_[W137-FRS-NFR-0002] Bootloader Binary - Naming Convention_
-
-The Bootloader Firmware binary shall have this naming convention: W137B-VX.Y.Z-<RevisionID>.hex
+The Application Firmware binary shall have this naming convention: REFA-VX.Y.Z-<RevisionID>.hex
 
 [REF N/A]  [STATUS ACTIVE] [REV 02]
 
-_[W137-FRS-NFR-0002] W137 Image - Naming Convention_
+_[REF-FRS-NFR-0002] Bootloader Binary - Naming Convention_
 
-The W137 Image shall have this naming convention: W137-VX.Y.Z.hex
+The Bootloader Firmware binary shall have this naming convention: REFB-VX.Y.Z-<RevisionID>.hex
+
+[REF N/A]  [STATUS ACTIVE] [REV 02]
+
+_[REF-FRS-NFR-0002] REF Image - Naming Convention_
+
+The REF Image shall have this naming convention: REF-VX.Y.Z.hex
 
 [REF N/A] [STATUS ACTIVE] [REV 02]
 
