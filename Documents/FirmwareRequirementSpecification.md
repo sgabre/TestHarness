@@ -1,4 +1,4 @@
-# Software Requirements Specification (SRS)
+# Firmware Requirements Specification (FRS)
 
 ## 0. Introduction
 
