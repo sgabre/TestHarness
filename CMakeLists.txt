@@ -8,6 +8,16 @@ if(NOT CMAKE_BUILD_TYPE)
     message(STATUS "CMAKE_BUILD_TYPE not defined, defaulting to Debug.")
 endif()
 
+# TODO: Add Test or Option to define/enable the Packs libraries if the toolchaine for embedded target is used  
+
+# Define default only if not already defined
+if(NOT DEFINED APPLICATION_TYPE)
+    set(APPLICATION_TYPE "NONE")
+endif()
+
+message(STATUS "Application Type: ${APPLICATION_TYPE}")
+
+
 # Ensure the ....
 option(TEST_LEVEL "Select the test type (UnitTesting, IntegrationTesting, etc.)" "None")
 message(STATUS "Test Type: ${TEST_LEVEL}")
@@ -43,8 +53,8 @@ endif()
 # Add Firmware subdirectory for all build types
 add_subdirectory(Firmware)
 
-
-include(${CMAKE_SOURCE_DIR}/.cmake/docs/doxygen.cmake)
+# TODO: Add Condition ?
+#include(${CMAKE_SOURCE_DIR}/.cmake/docs/doxygen.cmake)
 
 # Enable testing globally if any tests are to be included
 if(NOT TEST_LEVEL STREQUAL "NONE")
@@ -88,8 +98,6 @@ if(TEST_LEVEL STREQUAL "ALL" OR TEST_LEVEL STREQUAL "VALIDATION")
     # Define execution order
     #set_tests_properties(AcceptanceTesting PROPERTIES DEPENDS "UnitTest1;UnitTest2")
 endif()
-
-
 
 
 install(TARGETS Module)

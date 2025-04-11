@@ -2,6 +2,9 @@ if(NOT DEFINED LINK)
     set(LINK_PATH "./Core/Startup/STM32F401RETx_FLASH.ld")
 endif()
 
+# Set application type (used by other CMakeLists.txt)
+set(APPLICATION_TYPE "EMBEDDED_APPLICATION" CACHE STRING "Application type")
+
 set(LINK_PATH ${CMAKE_SOURCE_DIR}/${LINK})
 message(STATUS "LINK_PATH: ${LINK_PATH}")
 
@@ -34,13 +37,18 @@ set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 set(TARGET_FLAGS "-mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard ")
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${TARGET_FLAGS}")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections ")
 if(CMAKE_BUILD_TYPE MATCHES Debug)
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0 -g3")
 endif()
 if(CMAKE_BUILD_TYPE MATCHES Release)
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Os -g0")
 endif()
+
+# Add More Option
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-unused-function")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wunused-variable")
+
 
 set(CMAKE_ASM_FLAGS "${CMAKE_C_FLAGS} -x assembler-with-cpp -MMD -MP")
 set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -fno-rtti -fno-exceptions -fno-threadsafe-statics")
