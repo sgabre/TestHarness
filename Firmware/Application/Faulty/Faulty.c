@@ -8,8 +8,68 @@
 
 #include "stm32f4xx_hal.h"
 //Cortex-M0/0+ - ARMv6-M
+#ifdef CORTEX_M0
+typedef struct 
+{
+    uint32_t r0;
+    uint32_t r1;
+    uint32_t r2;
+    uint32_t r3;
+    uint32_t r12;
+    uint32_t lr;
+    uint32_t pc;
+    uint32_t psr;
+} ExceptionStackFrame;
+
+void dumpExceptionStack (ExceptionStackFrame* frame, uint32_t lr) 
+{
+    printf ("Stack frame:\r\n");
+    printf (" R0 = %08X\r\n", frame->r0);
+    printf (" R1 = %08X\r\n", frame->r1);
+    printf (" R2 = %08X\r\n", frame->r2);
+    printf (" R3 = %08X\r\n", frame->r3);
+    printf (" R12 = %08X\r\n", frame->r12);
+    printf (" LR = %08X\r\n", frame->lr);
+    printf (" PC = %08X\r\n", frame->pc);
+    printf (" PSR = %08X\r\n", frame->psr);
+    printf ("Misc\r\n");
+    printf (" LR/EXC_RETURN= %08X\r\n", lr);
+}
+
+void HardFault_Handler (void) 
+{
+    asm volatile(
+    " movs r0,#4 \r\n"
+    " mov r1,lr \r\n"
+    " tst r0,r1 \r\n"
+    " beq 1f \r\n"
+    " mrs r0,psp \r\n"
+    " b 2f \r\n"
+    "1: \r\n"
+    " mrs r0,msp \r\n"
+    "2:"
+    " mov r1,lr \r\n"
+    " ldr r2,=HardFault_Handler_C \r\n"
+    " bx r2"
+    : /* Outputs */
+    : /* Inputs */
+    : /* Clobbers */
+    );
+}
+
+void HardFault_Handler_C (ExceptionStackFrame* frame __attribute__((unused)), uint32_t lr __attribute__((unused))) 
+{
+    printf ("[HardFault]\r\n");
+    dumpExceptionStack (frame, lr);
+    
+    #if defined(DEBUG)
+    __DEBUG_BKPT();
+    #endif
+    while (1);
+}
 
 //Cortex-M3/4/7 - ARMv7-M/ARMv7E-M
+#else
 typedef struct 
 {
     uint32_t r0;
@@ -87,6 +147,9 @@ void HardFault_CallBack (ExceptionStackFrame* frame __attribute__((unused)), uin
     #endif
     while (1);
 }
+#endif
+
+
 #ifdef STM32F401xE
 static_assert(defined(STM32F401xE), "STM32F401xE must be defined!");
 static_assert(defined(USE_HAL_DRIVER), "USE_HAL_DRIVER must be defined!");
