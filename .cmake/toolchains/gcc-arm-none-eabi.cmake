@@ -48,7 +48,7 @@ endif()
 # Add More Option
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-unused-function")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wunused-variable")
-
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fstack-usage -fcyclomatic-complexity")
 
 set(CMAKE_ASM_FLAGS "${CMAKE_C_FLAGS} -x assembler-with-cpp -MMD -MP")
 set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -fno-rtti -fno-exceptions -fno-threadsafe-statics")
@@ -59,5 +59,6 @@ set(CMAKE_C_LINK_FLAGS "${CMAKE_C_LINK_FLAGS} --specs=nano.specs")
 set(CMAKE_C_LINK_FLAGS "${CMAKE_C_LINK_FLAGS} -Wl,-Map=${CMAKE_PROJECT_NAME}.map -Wl,--gc-sections")
 set(CMAKE_C_LINK_FLAGS "${CMAKE_C_LINK_FLAGS} -Wl,--start-group -lc -lm -Wl,--end-group")
 set(CMAKE_C_LINK_FLAGS "${CMAKE_C_LINK_FLAGS} -Wl,--print-memory-usage")
+
 
 set(CMAKE_CXX_LINK_FLAGS "${CMAKE_C_LINK_FLAGS} -Wl,--start-group -lstdc++ -lsupc++ -Wl,--end-group")

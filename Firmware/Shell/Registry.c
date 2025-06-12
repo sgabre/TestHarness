@@ -15,8 +15,9 @@
 
 
 static size_t mCommandCount = 0;
+#if (MEMORY_TYPE == DYNAMIC_MEMORY)
 static size_t mCommandCapacity = 0;
-
+#endif
 #if(MEMORY_TYPE == DYNAMIC_MEMORY)
 #define SHELL_MIN_COMMAND 2
 static ProtocolCommand_ts* mCommands = NULL;

@@ -12,7 +12,7 @@ option(BUILD_SHARED "Build as a shared library" OFF)
 
 # Determine library name based on build type
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    set(LIB_NAME "D${MODULE_NAME}Lib")
+    set(LIB_NAME "d${MODULE_NAME}Lib")
 else()
     set(LIB_NAME "${MODULE_NAME}Lib")
 endif()

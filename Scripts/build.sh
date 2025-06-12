@@ -16,10 +16,16 @@ echo "--Configuration--"
 #cmake -B ../build -S .. -DTEST_LEVEL=UNIT
 #cmake -B ../build -S .. -DCMAKE_BUILD_TYPE=Debug -DTEST_LEVEL=UNIT
 
-cmake -B ../build -S .. -DCMAKE_BUILD_TYPE=Debug -DTEST_LEVEL=NONE -DCMAKE_TOOLCHAIN_FILE=../.cmake/toolchains/gcc-arm-none-eabi.cmake -DLINK=./Firmware/Application/STM32F401RETx_FLASH.ld
+cmake -B ../build -S .. -DCMAKE_BUILD_TYPE=Debug -DTEST_LEVEL=NONE -DCMAKE_TOOLCHAIN_FILE=../.cmake/toolchains/gcc-arm-none-eabi.cmake -DLINK=./Firmware/Application/Startup/STANDALONE-STM32F401RETx-FLASH.ld
 
 echo "--Building--"
 cmake --build ../build --config Debug 
+
+echo "--Cyclomatic Complexity--"
+#find ../build/ -name "*.cyclo"  
+
+echo "--Stack Usage--"
+#find ./build/ -name "*.su"
 
 #echo "--Testing--"
 #ctest --show-only

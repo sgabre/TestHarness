@@ -1,5 +1,9 @@
 #/TestHarness/Firmware/CMakeLists.txt
 
+
+add_subdirectory(Shell)
+add_subdirectory(Module)
+
 if(NOT CMAKE_BUILD_TYPE STREQUAL UnitTesting)
     # Include the Version.cmake file
     include(${CMAKE_SOURCE_DIR}/.cmake/Version/git.cmake)
@@ -23,6 +27,6 @@ if(NOT CMAKE_BUILD_TYPE STREQUAL UnitTesting)
     add_subdirectory(Application)
 endif()
 
-add_subdirectory(Module)
-add_subdirectory(Shell)
+
+
 
