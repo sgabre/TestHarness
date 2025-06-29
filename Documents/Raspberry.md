@@ -1,4 +1,4 @@
-# Scope
+# Scope (Draft)
 
 The Raspberry Pi will serve as a **deported (remote) computer** responsible for managing the entire test and deployment process of the embedded software. Its role will span from pulling the latest code from the repository to producing and releasing the final software image.
 
@@ -44,3 +44,58 @@ The Raspberry Pi will serve as a **deported (remote) computer** responsible for 
 10. **Manage Logs and Reports**  
     - Organize logs, test reports, coverage data, and code metrics for review  
     - Optionally push reports to a central server or cloud storage
+   
+# System Software Environment
+
+The Raspberry Pi will be configured with a lightweight, maintainable, and fully automated software environment to support embedded software development, testing, and deployment.
+
+## Operating System
+
+- **OS:** Raspberry Pi OS (Lite) or Ubuntu Server for ARM
+- **Architecture:** 64-bit preferred for better performance and tool compatibility
+- **Remote Access:** Enabled via SSH and/or VNC
+
+## Core Software Stack
+
+| Category            | Tool/Technology                 | Description |
+|---------------------|----------------------------------|-------------|
+| **Version Control** | `git`                            | For cloning, pulling, and managing code from repositories |
+| **Build System**    | `CMake`, `Make`                  | Configure and automate the build process |
+| **Toolchain**       | `arm-none-eabi-gcc`              | Cross-compiler for ARM Cortex-M microcontrollers |
+| **Scripting**       | `bash`, `python3`, `pip`         | Automation of tasks and workflows |
+| **Containerization**| `Docker` (optional)              | Isolate and reproduce build/test environments |
+| **CI Tools**        | `cron`, `Git hooks`, `Jenkins` (optional) | Automate build and test pipelines |
+| **Testing**         | `Unity`, `CMock`, `Ceedling`     | Embedded unit testing framework |
+| **Static Analysis** | `cppcheck`, `clang-tidy`         | Identify bugs, style issues, and inefficiencies |
+| **Flashing Tools**  | `st-flash`, `JLinkExe`, `openocd`| Flash firmware to devices |
+| **Reporting**       | `gcov`, `lcov`, `genhtml`        | Code coverage reports |
+| **Documentation**   | `Doxygen`                        | Generate code documentation |
+| **Web/Dashboard**   | `nginx`, `lighttpd`, or others   | Serve status pages and reports locally |
+| **Database (optional)** | `sqlite3`, or CSV            | Store metrics, logs, and test results |
+
+## Folder Structure
+
+```
+/home/pi/EmbeddedCI/
+├── repo/ # Cloned embedded project repositories
+├── build/ # Output of build system
+├── logs/ # Test and build logs
+├── reports/ # Coverage, static analysis, etc.
+├── scripts/ # Bash/Python scripts to automate tasks
+├── tools/ # Custom tools, compilers, debug tools
+└── dashboard/ # Web UI or dashboards (optional)
+```
+
+## Network Requirements
+
+- Access to Git repositories (e.g., GitHub, GitLab)
+- SSH/SCP access to deploy firmware or fetch logs from other devices
+- Optional internet access for package and toolchain updates
+
+## Security Considerations
+
+- Disable password-based SSH login (use keys)
+- Limit sudo access
+- Use firewalls and restrict external access as needed
+
+
