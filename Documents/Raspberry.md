@@ -157,6 +157,43 @@ sudo apt install -y htop
 sudo apt install -y screen
 sudo apt install -y jq
 
+# --- [ Metrics Tools ] ---
+sudo apt install -y cloc
+sudo apt install -y pmccabe
+
+# Scope (if not installed)
+if ! command -v scope &> /dev/null; then
+    echo "[INFO] Installing Scope from source..."
+    cd /tmp
+    git clone https://github.com/artyom-beilis/scope.git
+    cd scope
+    make
+    sudo cp scope /usr/local/bin/
+    cd ..
+    rm -rf scope
+else
+    echo "[INFO] Scope is already installed."
+fi
+
+# Python-based tools
+pip3 install --user lizard
+
+# --- [ Documentation Tools ] ---
+echo "[INFO] Installing Doxygen..."
+sudo apt install -y doxygen
+
+echo "[INFO] Installing Sphinx and extensions..."
+pip3 install --user sphinx
+pip3 install --user sphinx_rtd_theme
+pip3 install --user breathe  # To integrate Doxygen with Sphinx
+
+# --- [ Robot Framework ] ---
+echo "[INFO] Installing Robot Framework and libraries..."
+pip3 install --user robotframework
+pip3 install --user robotframework-requests
+pip3 install --user robotframework-sshlibrary
+pip3 install --user robotframework-jsonlibrary
+
 echo "[INFO] System package setup complete."
 ```
 
