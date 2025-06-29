@@ -1,3 +1,7 @@
+# Disclamer
+
+This document are in draft mode and currently build with A.I. all suggestion and proposition has not been full evaluate, verifies & validate by the author. So becarfull.
+
 # Table of Contents
 
 1. [Scope](#Scope)
