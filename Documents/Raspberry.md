@@ -125,15 +125,37 @@ set -e
 echo "[INFO] Updating system packages..."
 sudo apt update && sudo apt upgrade -y
 
-echo "[INFO] Installing development tools..."
-sudo apt install -y git cmake make ninja-build build-essential gcc g++ gdb \
-    libusb-1.0-0-dev libudev-dev pkg-config curl wget unzip
+# Core build utilities
+sudo apt install -y git
+sudo apt install -y cmake
+sudo apt install -y make
+sudo apt install -y ninja-build
+sudo apt install -y build-essential
+sudo apt install -y gcc
+sudo apt install -y g++
 
-echo "[INFO] Installing ARM toolchain..."
-sudo apt install -y gcc-arm-none-eabi gdb-multiarch
+# Debugging tools
+sudo apt install -y gdb
 
-echo "[INFO] Installing utilities..."
-sudo apt install -y vim htop screen jq
+# ARM embedded toolchain
+sudo apt install -y gcc-arm-none-eabi
+sudo apt install -y gdb-multiarch
+
+# USB development support
+sudo apt install -y libusb-1.0-0-dev
+sudo apt install -y libudev-dev
+
+# General dev utilities
+sudo apt install -y pkg-config
+sudo apt install -y curl
+sudo apt install -y wget
+sudo apt install -y unzip
+
+# Extras for system management and scripts
+sudo apt install -y vim
+sudo apt install -y htop
+sudo apt install -y screen
+sudo apt install -y jq
 
 echo "[INFO] System package setup complete."
 ```
