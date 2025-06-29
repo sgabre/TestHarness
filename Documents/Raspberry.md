@@ -76,7 +76,7 @@ The Raspberry Pi will be configured with a lightweight, maintainable, and fully 
 ## Folder Structure
 
 ```
-/home/pi/EmbeddedCI/
+/home/pi/TestHarness/
 ├── repo/ # Cloned embedded project repositories
 ├── build/ # Output of build system
 ├── logs/ # Test and build logs
@@ -98,4 +98,110 @@ The Raspberry Pi will be configured with a lightweight, maintainable, and fully 
 - Limit sudo access
 - Use firewalls and restrict external access as needed
 
+# Installation/setup 
 
+The following Bash scripts automate the setup of the Raspberry Pi to serve as a remote test and deployment manager for embedded software.
+
+## Folder Structure
+
+```
+TestHarness/
+├── setup/
+│   ├── setup-system.sh
+│   ├── setup-python.sh
+│   ├── setup-docker.sh
+│   ├── setup-ci.sh
+│   └── install-all.sh
+```
+
+---
+
+## ✅ setup/setup-system.sh
+
+```bash
+#!/bin/bash
+set -e
+
+echo "[INFO] Updating system packages..."
+sudo apt update && sudo apt upgrade -y
+
+echo "[INFO] Installing development tools..."
+sudo apt install -y git cmake make ninja-build build-essential gcc g++ gdb \
+    libusb-1.0-0-dev libudev-dev pkg-config curl wget unzip
+
+echo "[INFO] Installing ARM toolchain..."
+sudo apt install -y gcc-arm-none-eabi gdb-multiarch
+
+echo "[INFO] Installing utilities..."
+sudo apt install -y vim htop screen jq
+
+echo "[INFO] System package setup complete."
+```
+
+## ✅ setup/setup-python.sh
+
+```bash
+#!/bin/bash
+set -e
+
+echo "[INFO] Installing Python and pip..."
+sudo apt install -y python3 python3-pip
+
+echo "[INFO] Installing Python packages..."
+pip3 install --user \
+    requests \
+    flask \
+    psutil \
+    pandas \
+    matplotlib \
+    rich
+
+echo "[INFO] Python environment setup complete."
+```
+
+## ✅ setup/setup-docker.sh (optional)
+
+```bash
+#!/bin/bash
+set -e
+
+echo "[INFO] Installing Docker..."
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+
+echo "[INFO] Adding current user to docker group..."
+sudo usermod -aG docker "$USER"
+
+echo "[INFO] Docker installed. Log out and back in to apply group changes."
+```
+
+## ✅ setup/setup-ci.sh
+
+```bash
+#!/bin/bash
+set -e
+
+echo "[INFO] Installing cron..."
+sudo apt install -y cron
+
+echo "[INFO] Setting up daily cron job for builds..."
+CRON_JOB="@daily /home/pi/TestHarness/scripts/run-daily-build.sh >> /home/pi/TestHarness/logs/cron.log 2>&1"
+( crontab -l 2>/dev/null; echo "$CRON_JOB" ) | crontab -
+
+echo "[INFO] Cron job installed."
+```
+
+## ✅ setup/install-all.sh
+
+```bash
+#!/bin/bash
+set -e
+
+echo "[INFO] Running full setup for TestHarness..."
+./setup/setup-system.sh
+./setup/setup-python.sh
+./setup/setup-docker.sh
+./setup/setup-ci.sh
+echo "[INFO] Full environment setup complete."
+
+```
