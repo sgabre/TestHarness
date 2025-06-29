@@ -1,35 +1,34 @@
 # Table of Contents
 
-1. [Introduction](#introduction)
-2. [Scope](#scope)
+1. [Scope](#Scope)
     - 2.1 [Key Capabilities of the Raspberry Pi TestHarness](#key-capabilities-of-the-raspberry-pi-testharness)
-3. [System Software Environment](#system-software-environment)
+2. [System Software Environment](#system-software-environment)
     - 3.1 [Operating System](#operating-system)
     - 3.2 [Core Software Stack](#core-software-stack)
     - 3.3 [Folder Structure](#folder-structure)
     - 3.4 [Network Requirements](#network-requirements)
     - 3.5 [Security Considerations](#security-considerations)
-4. [Installation and Setup](#installation-and-setup)
+3. [Installation and Setup](#installation-and-setup)
     - 4.1 [Folder Structure for Setup](#folder-structure-for-setup)
     - 4.2 [System Setup Script (`setup-system.sh`)](#system-setup-script-setup-systemsh)
     - 4.3 [Python Environment Setup (`setup-python.sh`)](#python-environment-setup-setup-pythonsh)
     - 4.4 [Docker Installation (`setup-docker.sh`)](#docker-installation-setup-dockersh)
     - 4.5 [Continuous Integration Setup (`setup-ci.sh`)](#continuous-integration-setup-setup-cish)
     - 4.6 [Full Installation Script (`install-all.sh`)](#full-installation-script-install-allsh)
-5. [Usage](#usage)
+4. [Usage](#usage)
     - 5.1 [Running the Setup Scripts](#running-the-setup-scripts)
     - 5.2 [Managing the Test Harness](#managing-the-test-harness)
     - 5.3 [Automating Test and Build Processes](#automating-test-and-build-processes)
-6. [Optimization and Maintenance](#optimization-and-maintenance)
+5. [Optimization and Maintenance](#optimization-and-maintenance)
     - 6.1 [Cleaning Up the System](#cleaning-up-the-system)
     - 6.2 [Creating a Custom Optimized Raspberry Pi Image](#creating-a-custom-optimized-raspberry-pi-image)
-7. [Appendices](#appendices)
+6. [Appendices](#appendices)
     - 7.1 [Example Setup Script Details](#example-setup-script-details)
     - 7.2 [Systemd Service for Automated Setup (Optional)](#systemd-service-for-automated-setup-optional)
     - 7.3 [Troubleshooting](#troubleshooting)
 
 
-# Scope (Draft)
+# Scope
 
 The Raspberry Pi will serve as a **deported (remote) computer** responsible for managing the entire test and deployment process of the embedded software. Its role will span from pulling the latest code from the repository to producing and releasing the final software image.
 
